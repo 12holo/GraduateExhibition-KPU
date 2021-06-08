@@ -1,0 +1,351 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400, 500, 700, 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0041-005A, U+0061-007A;
+  }
+
+/* 공통영역 시작 */
+
+*{ font-size: 16px; margin: 0; padding: 0; box-sizing: border-box;  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;}
+
+a{ text-decoration: none; color:#000;}
+
+.wrap{
+    /* z-index: -1; */
+    width: 100vw;
+    background-color: #000;
+    position: relative;
+}
+
+
+header{
+    width: 100vw;
+    height:100vh ; 
+}
+/* utill영역 */
+.utill{
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: white;
+    
+}
+.utill .logo{
+    display: flex;
+    align-items: center;
+    mix-blend-mode: difference;
+    
+}
+
+.kpu-link{
+    font-weight: bold;
+    mix-blend-mode: difference;
+}
+
+.header-contA{
+    display: flex;
+}
+
+
+
+/* gnb 공통영역 시작 */
+
+.gnb-wrap{
+    width: 15vw;
+    height: 94vh;
+    position: relative;
+    display: inline-block;
+}
+
+.gnb{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right:0;
+    bottom:111px;
+    font-family: 'Montserrat';
+}
+
+.gnb a{ 
+    font-family: 'Montserrat';
+    margin-bottom: 10px;
+    line-height:21px;
+}
+.gnb a:hover{
+    font-weight: bold;
+}
+/* .darkmode-btn{
+    margin-top:100px;
+    width:3rem;
+    height: 3rem;
+    border-radius: 50% 50%;
+    background-color: black;
+} */
+
+/* gnb 공통영역 끝 */
+
+/* 공통영역 끝 */
+
+.title-wrap{
+    width: 88vw;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.main-title{
+    text-align: center;
+    
+}
+
+.main-title p {
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+.main-title h1{
+    font-size: 4.236rem;
+    font-family: 'Montserrat';
+}
+
+.main-title img{
+    scale: 5;
+}
+
+.enter-btn{
+    width: 30vh;
+    height: 5vh;
+    margin-top: 1.5vh;
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height:4.5vh;
+    border-radius: 2.5vh;
+    font-family: 'Montserrat';
+}
+
+
+/* 랜딩페이지 애니메이션 영역 시작 */
+
+
+.landing-section1{
+    /* overflow: hidden; */
+    position: absolute;
+    width: 77vw;
+    height: 100vh;
+    
+}
+
+.landing-section2{
+    position: absolute; 
+    width: 23vw;
+    height: 100vh;
+    right:0px;
+    overflow: hidden;
+}
+
+.square-group-wrap{
+    position:relative;
+    float:right;
+    transition: all 1s ease-in-out;
+    
+}
+
+.back-white-square{ 
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    width:78vw;
+    height:78vw;
+    background-color: #fff;
+    border-radius: 100% 0 0 0 ;
+    animation-name: roundedSquare1;
+    animation-duration: 2s;
+
+}
+
+.front-color-square-group1{
+    display: inline-block;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    transition: all 1s ease-in-out;
+    
+}
+
+
+.front-color-square-group2{
+    display: inline-block;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+
+    transition: all 1s ease-in-out;
+    
+}
+
+.front-yellow-square{
+    
+    background-color: #FFE61F;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 100% 0 0 0;
+    animation-name: roundedSquare1;
+    animation-duration: 2s;
+    
+}
+.front-red-square{
+    background-color: #FF4D25;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 0 0 0 100% ;
+    animation-name: roundedSquare2;
+    animation-duration: 2s;
+}
+.front-green-square{
+    background-color: #16B569;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 100% 0 0 0;
+    animation-name: roundedSquare1;
+    animation-duration: 2s;
+}
+
+.front-white-square{
+    background-color: #fff;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 0 0 100% 0;
+    animation-name: roundedSquare4;
+    animation-duration: 2s;
+}
+
+.front-purple-square{
+    background-color: #A145FD;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 0 100% 0 0;
+    animation-name: roundedSquare3;
+    animation-duration: 2s;
+}
+
+.front-blue-square{
+    background-color: #4CABE9;
+    width: 42vh;
+    height: 42vh;
+    border-radius: 0 0 100% 0;
+    animation-name: roundedSquare4;
+    animation-duration: 2s;
+}
+
+
+@keyframes roundedSquare1{
+    from {
+        border-radius: 0%;
+    }
+    to{
+        border-radius:  100% 0 0 0;
+    }
+}
+
+@keyframes roundedSquare2{
+    from {
+        border-radius: 0%;
+    }
+    to{
+        border-radius: 0 0 0 100%;
+    }
+}
+
+@keyframes roundedSquare3{
+    from {
+        border-radius: 0%;
+    }
+    to{
+        border-radius: 0 100% 0 0;
+    }
+}
+
+@keyframes roundedSquare4{
+    from {
+        border-radius: 0%;
+    }
+    to{
+        border-radius: 0 0 100% 0;
+    }
+}
+
+/* 랜딩페이지 애니메이션 영역 끝 */
+
+/* 푸터 영역 시작 */
+
+footer{
+    width:100vw;
+    height: 245px;
+    background-color: #000;
+    text-align: center;    
+}
+
+.foot-wrap{
+    margin:0 10vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footA{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    
+    height: 16vh;
+}
+
+.footA .conA{
+    flex-direction: column-reverse;
+    color:#fff;
+    font-size: 20px;
+}
+
+.footA .conB p{
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+}
+
+.footB {
+    color:#fff;
+    float: right;
+    margin-top: 2vh;
+}
+
+.footB .conA{
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB .conB{
+    font-size: 12px;
+    color:#4c4c4c;
+    text-align: right;
+}
+
+
+/* 푸터 영역 끝 */

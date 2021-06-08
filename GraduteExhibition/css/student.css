@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400, 500, 700, 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0041-005A, U+0061-007A;
+  }
+
+
+*{ font-size: 16px; margin: 0; padding: 0; box-sizing: border-box;  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;}
+
+a{ text-decoration: none; color:#000;}
+
+.wrap{
+    width: 100%;
+    
+    max-height: 3000px;
+    /* background-color: #fff; */
+    position: relative;
+}
+/* utill영역 */
+.util-wrap{
+    z-index:9999;
+}
+
+.utill{
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: #000;
+    mix-blend-mode: difference;
+}
+.utill .logo{
+    display: flex;
+    align-items: center;
+}
+
+.kpu-link{
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.header-contA{
+    display: flex;
+}
+
+/* gnb 공통영역 시작 */
+/* sticky를 위한 복붙 영역 시작 */
+.gnbCont{
+    position:sticky;
+    top: 100vh;
+
+    z-index: 9999;
+}
+
+.gnb-cont{
+    width: 15vw;
+    
+    position: relative;
+    display: inline-block;
+    
+}
+
+.gnb{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right:0;
+    bottom:111px;
+    
+}
+/* sticky를 위한 복붙 영역 끝 */
+
+.gnb a{ 
+    margin-bottom: 10px;
+    line-height:21px;
+    font-family: 'Montserrat';
+}
+.gnb a:hover{
+    font-weight: bold;
+}
+
+/* .darkmode-btn{
+    margin-top:100px;
+    width:3rem;
+    height: 3rem;
+    border-radius: 50% 50%;
+    background-color: black;
+} */
+
+/* gnb 공통영역 끝 */
+
+.gnb .student{
+    font-weight: bold;
+}
+
+
+
+.container{
+    width:calc(100% - 15vw);
+    height: 100%;
+    float: right;
+    /* display: block; */
+    
+    
+    /* background-color: red; */
+}
+
+/* 작품카테고리 */
+.container .conA{
+    padding: 0 50px;
+     margin-top: 140px;
+
+    /* background-color: coral; */
+}
+.conA h1{
+    margin: 0;
+    text-align: end;
+    font-size: 2.618rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: #4C4C4C;
+}
+
+/* 작품 리스트(그리드) */
+.conC{
+    margin-top: 120px;
+    /* height: 100%; */
+    padding: 0 50px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+
+    /* background-color: coral; */
+}
+#profile-grid{
+    padding-top: 100%;
+}
+.conC .profile{
+   position: relative;
+   transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.conC .profile:hover{
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+ }
+
+
+/* 교수님 이름 / 도형배경 */
+.conC .text-backshape{
+    position: relative;
+}
+.professor-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+    padding-bottom: 50%;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    
+    color: #fff;
+}
+.professor-text h2{
+    font-size: 1.618rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.professor-text h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+/* 학생이름/학과 */
+.profile-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+
+    padding-top: 60%;
+    color: white;/* white */
+    text-shadow: 0px 1px 4px rgba(87, 87, 87, 0.8);
+    /* background-color:  rgba(245, 245, 245, 0.1); */
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.profile-text h2{
+    font-size:1rem;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+.profile-text h3{
+    font-size: 1.618rem;
+    font-weight: bold;
+    margin: 0;
+}
+.profile-text:hover{
+    border-radius: 50%;
+    /* -webkit-filter-blur: 2px;
+    filter: blur(2px); */
+    /* backdrop-filter: blur(5px) brightness(.9);
+    --webkit-backdrop-filter: blur(5px) brightness(.9); */
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+
+/* 도형 css */
+/* .conC .circle{
+    border-radius: 50%;
+}
+.conC .tl-r-line{
+    border-top-left-radius: 100%;
+}
+.conC .tr-r-line{
+    border-top-right-radius: 100%;
+} */
+.conC .br-r-line{
+    border-bottom-right-radius: 100%;
+}
+/* .conC .bl-r-line{
+    border-bottom-left-radius: 100%;
+} */
+/* .purple{
+    border:1px solid #8000FF;
+    background-color: #8000FF;
+}
+.green{
+    border: 1px solid #1BA965;
+    background-color: #1BA965;
+}
+.red{
+    border: 1px solid #FF4D25;
+    background-color: #FF4D25;
+} */
+.blue{
+    /* border: 1px solid #4CABE9; */
+    background-color: #4CABE9;
+}
+/* .yellow{
+    border: 1px solid #FFE61F;
+    background-color: #FFE61F;
+} */
+/* .filled.purple{
+    background-color: #8000FF;
+}
+.filled.green{
+    background-color: #1BA965;
+}
+.filled.red{
+    background-color: #FF4D25;
+}
+.filled.blue{
+    background-color: #256FFF;
+}
+.filled.yellow{
+    background-color: #FFE61F;
+} */
+
+
+
+
+/* -----------artworks img---------------- */
+.thumbnail-1{
+    background-image: url(https://thumb.mtstarnews.com/06/2018/09/2018092120144377452_1.jpg);
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+.thumbnail-2{
+    background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbAyJve%2FbtqNr8wMiXi%2FrV0XKPT78iMnmkXlViEmk0%2Fimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* --- */
+.thumbnail-3{
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/119788798_173753480889003_2495208072326516078_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=973b4a&_nc_ohc=0Je8krgWX7MAX85RJvp&_nc_ht=scontent-gmp1-1.xx&oh=0f4bf197153df6ccfc5d30a6f8e833ce&oe=60E25A65);
+    background-size: cover;
+}
+.thumbnail-4{
+    background-image: url(https://scontent-hkt1-2.xx.fbcdn.net/v/t1.6435-9/88074112_3219102784776203_3838795250374017024_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=TQUQRvGYAxIAX896q_c&_nc_ht=scontent-hkt1-2.xx&oh=9235a84e289295765c09b23f7cf2f5e5&oe=60E44EB7);
+    background-size: cover;
+    background-position: center;
+}
+/* --- */
+.thumbnail-5{
+    background-image: url(https://pbs.twimg.com/media/ESlCDoXUcAEWkPx?format=jpg&name=large);
+    background-size: cover;
+}
+.thumbnail-6{
+    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/119886141_173753474222337_7846868550167252582_n.jpg?_nc_cat=102&ccb=1-3&_nc_sid=973b4a&_nc_ohc=KvpgKMwQYUoAX_JRKbl&_nc_ht=scontent-gmp1-1.xx&oh=ba2a6a57984d8f6272536f8ba6fffa06&oe=60E39AB0);
+    background-size: cover;
+}
+/* --- */
+.thumbnail-7{
+    background-image: url(https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FWUTtq%2FbtqCDk16ewG%2FN9Xqzthp8DJ7oVXRjCt731%2Fimg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.thumbnail-8{
+    background-image: url(https://i.pinimg.com/originals/b1/46/ea/b146ea6cc29f79f0fdebca1637a1e075.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* --- */
+.thumbnail-9{
+    background-image: url(https://i.pinimg.com/originals/8c/20/a6/8c20a6aaaaeb62d44191a9464198d0cc.jpg);
+    background-size: cover;
+}
+.thumbnail-10{
+    background-image: url(https://i.pinimg.com/originals/e0/6c/75/e06c75e03e707b8c7017fe4331eacd86.png);
+    background-size: cover;
+}
+/* --- */
+.thumbnail-11{
+    background-image: url(https://i.pinimg.com/originals/bd/e1/12/bde112acabefd2db78d3b07c2ec5f87a.jpg);
+    background-size: cover;
+}
+.thumbnail-12{
+    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTJfOTUg/MDAxNTgzOTgyMjc5OTg4.8XNNebWpWmZaPs4Xr_dtJmyTlPXZLIN-2z9qkUhECZYg.d6y5c6jLA6_KQnsV4e66NftLB3CLLtc1JY_L_dkr7tkg.JPEG.eett7777/IMG_5667.jpg?type=w800);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-size: 150%;
+}
+/* --- */
+.thumbnail-13{
+    background-image: url(https://i.pinimg.com/originals/60/9c/07/609c0796ba8d3997b085b80cb9dcf2f1.jpg);
+    background-size: cover;
+}
+.thumbnail-14{
+    background-image: url(https://i.pinimg.com/564x/df/a7/e4/dfa7e429a3e6a8e54e1f8c6886d98308.jpg);
+    background-size: cover;
+}
+.thumbnail-15{
+    background-image: url(https://i.pinimg.com/564x/0f/77/ff/0f77ff063513313f7b660e770cbbe98c.jpg);
+    background-size: cover;
+}
+.thumbnail-16{
+    background-image: url(https://i.pinimg.com/564x/73/bd/a3/73bda3152cbe356972d71a049120834a.jpg);
+    background-size: cover;
+}
+.thumbnail-17{
+    background-image: url(https://img.insight.co.kr/static/2020/09/02/700/98j4263429d06416wy82.jpg);
+    background-size: cover;
+}
+.thumbnail-18{
+    background-image: url(https://i.pinimg.com/564x/e3/9d/1e/e39d1ec5fbc07c35902a470f62a972b9.jpg);
+    background-size: cover;
+}
+.thumbnail-19{
+    background-image: url(https://lh3.googleusercontent.com/proxy/SqUb-GyjCZm_ahS4Att5a8gZu8kA7CHiWH_WLGu0-IVp4e107D3xaUUdr6dSn23K2DJncfTEYB8pyuB6wJWGdxMmANqkAw2G87Nn2YgsFzfLzqVpVtwLwPorPcRBiuqoJAwQIa-QKN6GHRErLlhBgM-K4OGowSz0vybWDFm4Cx7NLYqpGe8-2AeiAxQ4BKpKUia1Ig69lxMvrPgGadpfs4rZwKl9LULqiCDX-vAArq9347f2aDu_O1hG75KxnpqJ7EgIhOa3n6YB5-54FRnivjtwazMR41ENBrHqco5cDHH6gAqG);
+    background-size: cover;
+}
+.thumbnail-20{
+    background-image: url(https://lh3.googleusercontent.com/proxy/PpCTZiMHQSLeipIWXkwg7bnJpO9F-QfaY0pgz5w4-TmiZCO874rAEpVHiy-OcpBD5bqVQVrcIYvoZi1UWeUgtMDvlJvh3pQV5fpx3dPU5ReQ8nLn6ssV5y_OlABWw0hB3HsaH0DfNA);
+    background-size: cover;
+}
+.thumbnail-21{
+    background-image: url(https://i.pinimg.com/564x/72/a9/2e/72a92e2923ea4f10c9dc1e3d21143e61.jpg);
+    background-size: cover;
+}
+.thumbnail-22{
+    background-image: url(https://i.pinimg.com/564x/65/d9/fc/65d9fc31bf60c86090ca1946228b7305.jpg);
+    background-size: cover;
+}
+.thumbnail-23{
+    background-image: url(https://i.pinimg.com/564x/bf/cb/34/bfcb3472af8cfb9a30d1651b24270525.jpg);
+    background-size: cover;
+}
+/* 푸터영역 */
+footer{
+    width:100%;
+    height: 245px;
+    background-color: #000;
+    text-align: center;
+
+    bottom: 0;
+    display: inline-block;
+    
+}
+
+.foot-wrap{
+    margin:0 10vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footA{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    
+    height: 16vh;
+}
+
+.footA .foot-logo{
+    flex-direction: column-reverse;
+    color:#fff;
+    font-size: 20px;
+}
+
+.footA .foot-txt p{
+    font-family: 'Montserrat';
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+}
+
+.footB {
+    color:#fff;
+    float: right;
+    margin-top: 2vh;
+}
+
+.footB .foot-logo{
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB .foot-txt{
+    font-size: 12px;
+    color:#4c4c4c;
+    text-align: right;
+}
+
+/* 푸터 영역 끝 */
+
+
+
+
+/* ------------------------------------------ */
+

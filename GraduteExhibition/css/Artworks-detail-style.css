@@ -1,0 +1,815 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400, 500, 700, 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0041-005A, U+0061-007A;
+  }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;
+    font-size: 16px;
+    ;
+    /* overflow-x: hidden; */
+}
+
+/* 상단 gnb */
+.utill-wrap{
+    z-index:9999;
+}
+
+.utill{
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: #000;
+    mix-blend-mode: difference;
+}
+.utill .logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.kpu-link{
+    font-weight: bold;
+}
+
+.header-contA{
+    display: flex;
+}
+/* utill영역 끝 */
+
+.infoA{
+    height: 500px;
+}
+/* hero header 이미지 */
+.hero-header{
+    width: 100%;
+    height: 330px;
+    position: relative;
+}
+.hero-artwork-img-wrap{
+    width: 100%;
+    height: 330px;
+    overflow: hidden;
+}
+.hero-artwork-img{
+    width: 100%;
+    height: 330px;
+    background-image: linear-gradient(rgba(24, 24, 24, 0.5), rgba(24, 24, 24, 0.5)), url(https://cdn.notefolio.net/img/61/a2/61a2d89eca1fe13ce0e6c50c53a1771185ff0c7e9dfa5cc47e0fc997e1d2159b_v1.jpg);
+    background-position: 0% 72%;
+    background-size: cover;
+    -webkit-filter-blur: 2px;
+    filter: blur(2px);
+    transform: scale(1.02);
+    
+    font-size: 0.5rem;
+    color: rgba(155, 155, 155, 0.37);
+}
+/* hero header 이미지 속 닫기버튼 */
+.hero-header .close-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+}
+.hero-header .close-btn:hover{
+    border: 2px solid #000;
+    color: #000;
+    background-color: rgba(252, 252, 252, 0.1);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+/* 작품타이틀 */
+
+.main-title{
+    /* display: inline-block; */
+    text-align: center;
+    position: absolute;
+    top: 120px;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    color: #fff;
+   
+}
+.main-title h3{
+    font-size: 1.618rem;
+    font-weight: 400;
+    margin: 0 0;
+    line-height: 100%;
+    font-family: 'Montserrat';
+}
+.main-title h1{
+    font-size: 2.618rem;
+    font-weight: 700;
+    margin: 0 0;
+    margin-top: 20px;
+    line-height: 100%;
+}
+/* 프로필 */
+.profile{
+    /* display: inline-block; */
+    position: absolute;
+    bottom: -120px;
+    left:50vw;
+    transform: translate(-50%, 0);
+    transform-origin: 50% 50%;
+    color: #4C4C4C;
+}
+.sml-business-card{
+    width: 150px;
+    display: inline-block;
+    margin-top: 50px;
+}
+.sml-business-card:not(:last-child){
+    margin-right: 1.875rem;
+}
+.sml-business-card #profile-img{
+    width: 92px;
+    height: 92px;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+.sml-profile-img:hover{
+    box-shadow: 0px 2px 8px rgba(90, 90, 90, 0.5);
+}
+.sml-business-card #name{
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 8px 0 2px 0;
+    font-weight: 900;
+}
+.sml-business-card #department{
+    font-size: 0.625rem;
+    text-align: center;
+    margin: 0;
+}
+.sml-business-card #major{
+    font-size: 0.875rem;
+    text-align: center;
+    margin: 0;
+}
+.profile-1{
+    background-image: url(https://i.pinimg.com/564x/72/a9/2e/72a92e2923ea4f10c9dc1e3d21143e61.jpg);
+    background-size: cover;
+}
+.profile-2{
+    background-image: url(https://i.pinimg.com/564x/bf/cb/34/bfcb3472af8cfb9a30d1651b24270525.jpg);
+    background-size: cover;
+}
+.profile-3{
+    background-image: url(https://i.pinimg.com/564x/65/d9/fc/65d9fc31bf60c86090ca1946228b7305.jpg);
+    background-size: cover;
+}
+
+/* 한마디소감 */
+.thoughts h2{
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+/* 사이드 여백 속 음성재생버튼 */
+.gnb-wrap{
+    width: 200px;
+    height: 6000px;
+    float: left;
+}
+#audio-btn-wrap{
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+
+}
+/* 툴팁 */
+.tooltip{
+    font-size: 0.75rem;
+    background-color: #e9e9e9;
+    color: #4C4C4C;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    position: absolute;
+    bottom: -80px;
+    right: -22px;
+
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: #e9e9e9;
+    bottom: -8px;
+    left: 70%;
+    transform:  translateX(-70%) rotate(45deg);
+}
+.tooltip.unactiveTooltip{
+    bottom: -100px;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 재생버튼 */
+.gnb-wrap .audio-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    right: 3px;
+    bottom: -150px;
+    z-index: 2;
+
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000;
+}
+/* 재생버튼 뒤 블러 */
+.audio-btn-effect-1{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    bottom: -153px;
+    z-index: 1;
+    filter: blur(4px);
+    opacity: 0;
+
+    background-color: #5A5A5A;
+}
+/* 재생버튼 애니메이션 */
+.audio-btn.activeBtn{
+    animation: playingAudioBtn 1.8s infinite;
+}
+.audio-btn-effect-1.activeBlur{
+    opacity: 1;
+    animation: playingAudioBlur 1.8s infinite;
+}
+@keyframes playingAudioBlur{
+    0%{
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes playingAudioBtn{
+    0% {
+        background-color: #000;
+        transition: ease-in-out;
+    }
+    /* 25% {
+        background-color: #E7E7E7;
+        color: #000;
+        transition: ease-in-out;
+    } */
+    50% {
+        background-color: #E6E6E6;
+        color: #000;
+        transition: ease-in-out;
+    }
+    90% {
+        background-color: #000;
+        color: #fff;
+        transition: ease-in-out;
+    }
+    /* 20% {
+        background-color: #fff;
+        color: #000;
+        transition: ease-in-out;
+    } */
+}
+
+/* 오른쪽 사이드 여백 */
+.empty-right{
+    width: 200px;
+    height: 100vh;
+    float: left;
+}
+/* 컨테이너 위 여백 */
+/* .empty-top{
+    height: 200px;
+} */
+/* 전체 내용 컨테이너 */
+.container{
+    width: calc(100% - 400px);
+    /* min-width: calc(100% - 400px); */
+    height: 100%;
+    float: left;
+    color: #4C4C4C;
+}
+
+/* 작품내용 */
+.contents{
+    padding: 50px 30px;
+}
+#partA{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+.partTitle{
+    display: flex;
+    /* width: 10%; */
+    flex-basis: 10%;
+    align-items: center;
+    padding-left: 100px;
+    font-family: 'Montserrat';
+    
+}
+.partTitle h2{
+    font-size: 1.98rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.partText{
+    display: flex;
+    width: 70%;
+    /* flex-basis: 40%; */
+    /* padding-right: 100px; */
+    
+}
+.partText p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: justify;
+}
+.overview-img{
+    width: 100%;
+    height: 600px;
+    margin-top: 80px;
+    width: 100%;
+    background-image: url(https://cdn.notefolio.net/img/c6/86/c6866eb72c4fdee63b52b843e26aefc180baf993c9c59beee0eec780aff99f15_v1.jpg);
+    background-position: 0% 50%;
+    background-size: cover;
+}
+
+/* 슬라이드 이미지 */
+.imgSlide{
+    width: 100%;
+    height: 100vh;
+    margin-top: 80px;
+    overflow: hidden;
+    position: relative;
+}
+.slideContainer.pages2{
+    width: 200%;
+    height: 100vh;
+    /* transform: translate(-50%) ; */
+    transition: transform 0.5s;
+}
+.pages2 > .innerImg{
+    width: 50%;
+    height: 100vh;
+    float: left;
+    overflow: hidden;
+}
+.slideContainer.pages3{
+    width: 300%;
+    height: 100vh;
+    transition: transform 0.5s;
+}
+.pages3 > .innerImg{
+    width: 33.33%;
+    height: 100vh;
+    float: left;
+    overflow: hidden;
+}
+.slideContainer.pages4{
+    width: 400%;
+    height: 100vh;
+    transition: transform 0.5s;
+}
+.pages4 > .innerImg{
+    width: 25%;
+    height: 100vh;
+    float: left;
+    overflow: hidden;
+}
+.slide-img{
+    width: 100%;
+    object-fit: cover;
+}
+.slideIndicator{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+}
+.slideIndicator button{
+    margin: 0 5px 15px 5px;
+    padding: 6px 6px;
+    background: none;
+    border: 1px solid #000;
+    border-radius: 50%;
+    outline: none;
+}
+.indicatorFocus:focus{
+    background-color: #000;
+}
+/* 공유하기 */
+.share-wrap{
+    padding: 30px;
+}
+#share{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+.share-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    
+    display: inline-block;
+    order: 2;
+    z-index: 1;
+
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    text-align: center;
+    background-color: #000;
+}
+.share-btn:hover{
+    box-shadow: 0px 0px 8px rgb(65, 65, 65);
+    transition: all 0.2s ease-in-out;
+
+}
+.method{
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+
+    display: inline-block;
+    order: 1;
+    transform: translate(50px, 0);
+
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    background-color: #E7E7E7;    
+}
+.method.activeShare{
+    width: 225px;
+}
+.method-list{
+    padding: 12px 70px 12px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.method-list.activeShare{
+    opacity: 1;
+    transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.method-list a{
+    line-height: 100%;
+    font-size: 24px;
+    color: #000;
+}
+
+/* 댓글 */
+#comment-wrap{
+    padding: 30px;
+}
+#comment-wrap .comment{
+    font-family: 'Montserrat';
+    font-size: 1.618rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.comment-input{
+    padding-left: 10px;
+}
+.name-box{
+    font-family: 'Montserrat';
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background: none;
+    outline-style: none;
+    margin-bottom: 10px;
+}
+.input-fake-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.message-box{
+    font-family: 'Montserrat';
+    font-size: 0.875rem;
+    vertical-align: top;
+    padding: 0.5rem;
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    background: none;
+    outline: none;
+    
+    width: 100%;
+    height: 3rem;
+    margin-right: 16px;
+}
+.comment-btn{
+    padding: 8px 12px;
+    background-color: #000;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 0.875rem;
+
+    float: right;
+}
+.comment-btn:hover{
+    box-shadow: 0px 0px 7px rgb(65, 65, 65);
+    transition: all 0.2s ease-in-out;
+}
+/* .input-fake-wrap > button:hover{
+    box-shadow: 0px 0px 8px #0057FF;
+    transition: all 0.2s ease-in-out;
+} */
+#comment-list{
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.comment-item{
+    border-bottom: 1px solid #E7E7E7;
+    padding: 20px;
+}
+.comment-item:first-child{
+    border-top: 1px solid #E7E7E7;
+}
+.comment-item .visitor-name{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+}
+.comment-item .text{
+    margin: 10px 0 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.comment-item .time{
+    margin: 0 0 0 10px;
+    font-size: 0.625rem;
+    font-weight: 400;
+    color: #858585;
+    display: inline-block
+}
+
+/* 학생 네임카드 */
+.blur-it{
+    filter: blur(4px);
+}
+.business-card-bg{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    background: rgba(113, 113, 113, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.business-card-bg.open{
+    opacity: 1;
+    visibility: visible;
+}
+.fake-bg-wrap{
+    width: 100%;
+}
+#business-card-wrap{
+    position: relative;
+    top: 50%; 
+    left: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.business-card-bg.open #business-card-wrap{
+    opacity: 1;
+    top: 0%; 
+    left: 0%;
+}
+
+#fake-btn-wrap{
+    display: flex;
+    justify-content: flex-end;
+    width: calc(100% - 600px);
+    max-width: 1000px;
+    /* height: 100%; */
+    margin: 0 auto 20px auto;
+
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.business-card-bg.open #fake-btn-wrap{
+    opacity: 1;
+}
+.close-btn-card{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    background-color: none;
+    
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+}
+.close-btn-card:hover{
+    border: 2px solid #000;
+    color: #000;
+    background-color: rgba(252, 252, 252, 0.1);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+#business-card-wrap{
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 400px);
+    /* height: 100%; */
+    margin: 0 auto 100px auto;
+}
+.fake-card-wrap{
+    width: 280px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.fake-card-wrap:not(:last-child){
+    margin-right: 30px;
+}
+.fake-card-wrap .lg-business-card{
+    padding: 50px 20px;
+}
+.lg-profile-img{
+    width: 190px;
+    height: 190px;
+    border-radius: 100px;
+    margin: 0 auto;
+}
+.lg-business-card #name{
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0 8px 0;
+}
+.lg-business-card .sns-link{
+    font-family: 'Montserrat';
+    width: 120px;
+    padding: 8px 10px ;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+    margin: 0 auto;
+}
+.sns-link a{
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+}
+.lg-business-card i{
+    font-size: 16px;
+    line-height: 100%;
+    color: #4c4c4c;
+    margin-right: 10px;
+}
+.bold-txt{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+.reg-txt{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+.position{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 8px 0;
+}
+.email{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 30px 0;
+}
+.portfolio a{
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.portfolio > a:hover{
+    background-color: #000;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* 푸터영역 */
+footer{
+    width:100%;
+    height: 245px;
+    background-color: #000;
+    text-align: center;
+
+    display: inline-block;
+}
+.foot-wrap{
+    margin:0 10vw;
+    display: flex;
+    flex-direction: column;
+}
+.footA{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    
+    height: 16vh;
+}
+.footA .foot-logo{
+    flex-direction: column-reverse;
+    color:#fff;
+    font-size: 20px;
+}
+.footA .foot-txt p{
+    font-family: 'Montserrat';
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+}
+.footB {
+    color:#fff;
+    float: right;
+    margin-top: 2vh;
+}
+.footB .foot-logo{
+    font-family: 'Montserrat';
+    text-align: right;
+}
+.footB .foot-txt{
+    font-size: 12px;
+    color:#4c4c4c;
+    text-align: right;
+}

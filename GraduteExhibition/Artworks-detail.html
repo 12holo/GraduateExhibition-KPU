@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/Artworks-detail-style.css">
+
+    <!-- 폰트 -->
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+
+    <!-- 폰트어썸-아이콘 -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- 스크롤 효과 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>KPU Graduate Exhibition</title>
+    
+</head>
+<body>
+
+    <script> 
+        AOS.init(); 
+    </script>
+
+
+    <!-- 상단 gnb -->
+    <div class="utill-wrap">
+        <div class="utill">
+            <div class="logo"><img src="image/logo-top.png"></div>
+            <div class="kpu-link">Korea Polytechnic University</div>
+        </div>
+    </div>
+
+    <header class="infoA">
+        <!-- hero header 이미지 -->
+        <div class="hero-header">
+            <div class=" hero-artwork-img-wrap">
+                <div class="hero-artwork-img"></div>
+            </div>
+            <!-- 출처 : https://notefolio.net/1bo2bo/236227 -->
+                <!-- 닫기버튼 -->
+            <div class="close-btn close-btn-page"><i class="fas fa-times"></i></div>
+
+            <!-- 작품 타이틀 / 학생 프로필 -->
+            <!-- 작품 타이틀 -->
+            <section class="main-title">
+                <h3>Media Design Engineering</h3>
+                <h1>파마씨 건강 관리 보조 앱</h1>
+             </section>
+
+            <!-- 프로필 -->
+            <section class="profile">
+                <div class="sml-business-card">
+                    <div id="profile-img" class="profile-1 sml-profile-img"></div>
+                    <p id="name">이은정</p>
+                    <p id="department">디자인공학부</p>
+                    <p id="major">미디어디자인공학전공</p>
+                </div>
+                <div class="sml-business-card">
+                    <div id="profile-img" class="profile-2 sml-profile-img"></div>
+                    <p id="name">이현민</p>
+                    <p id="department">디자인공학부</p>
+                    <p id="major">미디어디자인공학전공</p>
+                </div>
+                <div class="sml-business-card">
+                    <div id="profile-img" class="profile-3 sml-profile-img"></div>
+                    <p id="name">이혜지</p>
+                    <p id="department">디자인공학부</p>
+                    <p id="major">미디어디자인공학전공</p>
+                </div>
+            </section>
+
+        </div>
+
+    </header>
+    <!-- <section class="thoughts">
+        <h2>“”</h2>
+    </section> -->
+
+
+    <!-- 사이드 여백 속  음성재생버튼 -->
+    <div class="gnbCont">
+        <header class="gnb-wrap">
+            <div id="audio-btn-wrap">
+                <!-- 툴팁 -->
+                <div class="tooltip">작품설명을 위한 음성이 <br>준비되어 있습니다!</div>
+
+                <!-- 재생버튼 -->
+                <div class="audio-btn">
+                    <i class="fas fa-headphones-alt"></i>
+                </div>
+                <span class="audio-btn-effect-1"></span>
+
+                <!-- 음성파일 -->
+                <audio id="audio-item">
+                    <source src="audio/sample.mp3" type="audio/mp3">
+                </audio>
+
+            </div>
+        </header>
+    </div> 
+    
+    
+    <!-- 전체 내용 컨테이너 -->
+    <div class="container">
+        <div class="empty-top"></div>
+        <!-- 작품내용 -->
+        <div class="contents">
+
+            <section id="partA" data-aos="fade-up" data-aos-duration="2000">
+                <div class="partTitle">
+                    <h2>Overview</h2>
+                </div>
+                <div class="partText">
+                    <p>과거 건강기능식품은 노년층과 중장년층을 위한 제품이라는 인식이 높았지만, 최근 바쁜 일상속에서 건강관리가 쉽지 않은 젊은 셀프 메디케이션 세대를 중심으로 건강기능식품 시장은 매년 성장하고 있습니다. 이에 더해 코로나 바이러스의 확산으로 건강식품의 수요의 급증에 따라 기존업계는 더 다양한 매체와 서비스를 통해 제품을 판매하기 시작했습니다. 시장의 성장에 따라 발생하는 새로운 문제들과 니즈들을 해결하기 위해 파마씨는 테스트를 통해 자신의 건강상태를 파악하고 결과에 맞는 관리방법을 제시,추천 받아 지속적으로 건강관리를 할 수 있도록 도움을 주는 서비스를 제공합니다.
+                    </p>
+                </div>
+                <div class="partImg overview-img"></div>
+
+            </section>
+
+            <section id="partA" data-aos="fade-up" data-aos-duration="2000">
+                <div class="partTitle">
+                    <h2>Background</h2>
+                </div>
+                <div class="partText">
+                    <p>과거 건강기능식품은 노년층과 중장년층을 위한 제품이라는 인식이 높았지만, 최근 바쁜 일상속에서 건강관리가 쉽지 않은 젊은 셀프 메디케이션 세대를 중심으로 건강기능식품 시장은 매년 성장하고 있습니다. 이에 더해 코로나 바이러스의 확산으로 건강식품의 수요의 급증에 따라 기존업계는 더 다양한 매체와 서비스를 통해 제품을 판매하기 시작했습니다.
+                    </p>
+                </div>
+                <div class="partImg imgSlide">
+                    <!-- 슬라이드이미지 -->
+                    <div class="slideContainer pages2 pages2-bg">
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/60/14/60147cf3f17ed9d487bbc4886944dfdcd12402cb4937c1823234941197863f1f_v1.jpg">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/14/a9/14a9419ba6b40f8ce735e1c4b108f1eca81d421767127e9651ba75802940ae5a_v1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- 슬라이드 인티케이터 -->
+                    <div class="slideIndicator">
+                        <button class="btn2-bg-1"></button>
+                        <button class="btn2-bg-2"></button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="partA" data-aos="fade-up" data-aos-duration="2000">
+                <div class="partTitle">
+                    <h2>Goal</h2>
+                </div>
+                <div class="partText">
+                    <p>퍼소나를 작성하여 문제점과 니즈를 찾아 충촉시키기 위해 아래와 같은 솔루션을 제공합니다.
+                    </p>
+                </div>
+                <div class="partImg imgSlide">
+                    <!-- 슬라이드이미지 -->
+                    <div class="slideContainer pages2 pages2-goal">
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/07/08/0708ba79f548afc49e92b7d22d23f361f1ae19bd5bb5f3f16ef6623eeecbdd5b_v1.jpg">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/a2/1a/a21aa928873d51031f02b7fe3e917db8f303fadf434bffa3c2e8bbd6c4e80165_v1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- 슬라이드 인디케이터 -->
+                    <div class="slideIndicator">
+                        <button class="btn2-goal-1"></button>
+                        <button class="btn2-goal-2"></button>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="partA" data-aos="fade-up" data-aos-duration="2000">
+                <div class="partTitle">
+                    <h2>Concept</h2>
+                </div>
+                <div class="partText">
+                    <p>파마씨는 테스트를 통해 건강상태를 파악하고 결과에 마는 관리방법을 제시, 추천 받아 지속적으로 건강관리를 할 수 있도록 도움을 주는 서비스입니다.
+                    </p>
+                </div>
+                <div class="partImg imgSlide">
+                    <!-- 슬라이드이미지 -->
+                    <div class="slideContainer pages3">
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/07/e4/07e49f4a0a9e586559a1c1d04a6797932e7ad4dabf57b8dd256f4bafe6dcca33_v1.jpg">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/33/95/33956a05d6a2076c5670a5ad813f1a0eb6275b49282621407c511db0c2999c62_v1.jpg">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/86/5b/865baa552778a1759a7a9690e4dfb948df608947ee07e2757c1baa3337c079b0_v1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- 슬라이드 인디케이터 -->
+                    <div class="slideIndicator">
+                        <button class="btn3-1"></button>
+                        <button class="btn3-2"></button>
+                        <button class="btn3-3"></button>
+                    </div>
+
+                </div>
+
+            </section>
+            
+            <section id="partA" data-aos="fade-up" data-aos-duration="2000">
+                <div class="partTitle">
+                    <h2>Function</h2>
+                </div>
+                <div class="partText">
+                    <p>파마씨는 테스트를 통해 건강상태를 파악하고 결과에 마는 관리방법을 제시, 추천 받아 지속적으로 건강관리를 할 수 있도록 도움을 주는 서비스입니다.
+                    </p>
+                </div>
+                <div class="partImg imgSlide">
+                    <!-- 슬라이드이미지 -->
+                    <div class="slideContainer pages4">
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/02/f8/02f8e336dbd10e8fd17fe87850c4e43f21c53b4a407e12acae5f889301e8080c_v1.jpg">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/de/5b/de5b2b30b582ca4754f321b954fd91a9633785f164463ed72eb8d17f59ce0733.gif">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/85/7b/857b05aa0921849003ef0886f6c99de34c0801b09275945417d4de6b056d9e88.gif">
+                        </div>
+                        <div class="innerImg">
+                            <img class="slide-img" src="https://cdn.notefolio.net/img/0c/0c/0c0c04927f9d819db031b9f51eb185fae0368c1490e72a25b9ab5f864529004d_v1.jpg">
+                        </div>
+                    </div>
+
+                    <!-- 슬라이드 인디케이터 -->
+                    <div class="slideIndicator">
+                        <button class="btn4-1"></button>
+                        <button class="btn4-2"></button>
+                        <button class="btn4-3"></button>
+                        <button class="btn4-4"></button>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+        
+
+        <!-- 공유하기-->
+        <div class="share-wrap">
+            <section id="share">
+                <!-- 공유하기 버튼 -->
+                <!-- 아이콘 바꾸기 -->
+                <div class="share-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                <!-- 버튼 클릭시 나타나는 sns수단 -->
+                <div class="method">
+                    <div class="method-list">
+                        <a href="#" class="link"><i class="fas fa-link"></i></a>
+                        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="kakaktalk"><i class="fab fa-line"></i></a> <!-- 카카오아이콘 임시 -->
+                    </div>
+                </div>
+                
+            </section>
+
+        </div>
+
+
+        <!-- 댓글 -->
+        <div id="comment-wrap">
+            
+            <h2 class="comment">Comment</h2>
+
+            <!-- 댓글 작성 부분 -->
+            <section class="comment-input">
+                <input class="name-box" placeholder="Write your name">
+                <div class="input-fake-wrap">
+                    <input class="message-box" placeholder="Write Comment">
+                    <button class="comment-btn">Comment</button>
+                </div>
+            </section>
+
+            <!-- 댓글 목록 -->
+            <section id="comment-list">
+                <div class="comment-item">
+                    <h3 class="visitor-name">모두에게 축하해주는 사람</h3>
+                    <p class="time">2021-10-03 14:28</p>
+                    <p class="text">멋있는 작품이네요! 수고했어요~!</p>
+                </div>
+                <div class="comment-item">
+                    <h3 class="visitor-name">방문자1</h3>
+                    <p class="time">2021-10-03 11:31</p>
+                    <p class="text">졸업을 축하합니다 짝짝짝~</p>
+                </div>
+                <div class="comment-item">
+                    <h3 class="visitor-name">미래의 디자인공학부</h3>
+                    <p class="time">2021-10-03 11:18</p>
+                    <p class="text">아이디어를 잘 소개해주신거 같아요! 많은 도움이 될 것 같아요 졸업 축하드려요!!!!</p>
+                </div>
+            </section>
+
+        </div> 
+
+    </div>
+    <!-- 컨테이너 끝 -->
+
+
+    <!-- 학생 네임카드 레이어팝업 -->
+    <div class="business-card-bg">
+
+        <div class="fake-bg-wrap">
+            <div id="fake-btn-wrap">
+                <div class="close-btn close-btn-card"><i class="fas fa-times"></i></div>
+            </div>
+
+            <!-- 네임카드묶음 -->
+            <section id="business-card-wrap">
+
+                <!-- 네임카트 하나 -->
+                <div class="fake-card-wrap">
+                    <div class="lg-business-card student-1">
+                        <div id="profile-img" class="profile-1 lg-profile-img"></div>
+                        <p id="name">Eunjeong Lee</p>
+                        <div class="sns-link">
+                            <i class="fab fa-instagram"></i>
+                            <a href="#">@yZZang</a>
+                        </div>
+                        <div class="position">
+                            <p class="bold-txt">Position</p>
+                            <p class="reg-txt">Web develop / UX design</p>
+                        </div>
+                        <div class="email">
+                            <p class="bold-txt">Email</p>
+                            <p class="reg-txt">eunjeong@naver.com</p>
+                        </div>
+                        <div class="portfolio">
+                            <p class="bold-txt">Portfolio Link</p>
+                            <a href="#">Click here!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 네임카트 하나 -->
+                <div class="fake-card-wrap">
+                    <div class="lg-business-card student-2">
+                        <div id="profile-img" class="profile-2 lg-profile-img"></div>
+                        <p id="name">Hyeonmin Lee</p>
+                        <div class="sns-link">
+                            <i class="fab fa-instagram"></i>
+                            <a href="#">@minihyeon</a>
+                        </div>
+                        <div class="position">
+                            <p class="bold-txt">Position</p>
+                            <p class="reg-txt">Web develop / UX design</p>
+                        </div>
+                        <div class="email">
+                            <p class="bold-txt">Email</p>
+                            <p class="reg-txt">minihyeon486@naver.com</p>
+                        </div>
+                        <div class="portfolio">
+                            <p class="bold-txt">Portfolio Link</p>
+                            <a href="#">Click here!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 네임카트 하나 -->
+                <di class="fake-card-wrap">
+                    <div class="lg-business-card student-3">
+                        <div id="profile-img" class="profile-3 lg-profile-img"></div>
+                        <p id="name">Hyeji Lee</p>
+                        <div class="sns-link">
+                            <i class="fab fa-instagram"></i>
+                            <a href="#">@hyeheyhye</a>
+                        </div>
+                        <div class="position">
+                            <p class="bold-txt">Position</p>
+                            <p class="reg-txt">Web develop / UX design</p>
+                        </div>
+                        <div class="email">
+                            <p class="bold-txt">Email</p>
+                            <p class="reg-txt">hyegi0821@naver.com</p>
+                        </div>
+                        <div class="portfolio">
+                            <p class="bold-txt">Portfolio Link</p>
+                            <a href="#">Click here!</a>
+                        </div>
+                    </div>
+                </di v>
+
+            </section>
+        </div>
+    </div>
+
+    <!-- 오른쪽 여백 -->
+    <div class="empty-right"></div>
+
+    <!-- 푸터영역 -->
+    <footer>
+        <div class="foot-wrap">
+            <div class="footA">
+                <div class="foot-logo"><img src="image/logo-white.png"></div>
+                <div class="foot-txt">
+                    <p>
+                    Korea Polytechnic University <br>
+                    Design Engineering <br>
+                    Graduate Exhibition
+                    </p>
+                </div>
+            </div>
+            <div class="footB">
+                <div class="foot-logo">KPU</div>
+                <div class="foot-txt">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/Artworks-detail-script.js"></script>
+</body>
+</html>

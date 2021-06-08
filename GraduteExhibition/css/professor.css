@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400, 500, 700, 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0041-005A, U+0061-007A;
+  }
+
+
+*{ font-size: 16px; margin: 0; padding: 0; box-sizing: border-box;  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;}
+
+a{ text-decoration: none; color:#000;}
+
+.wrap{
+    width: 100%;
+    max-height: 2200px;
+    /* background-color: #fff; */
+    position: relative;
+}
+/* utill영역 */
+.util-wrap{
+    z-index:9999;
+}
+.utill{
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: #000;
+    mix-blend-mode: difference;
+}
+.utill .logo{
+    display: flex;
+    align-items: center;
+}
+
+
+.kpu-link{
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.header-contA{
+    display: flex;
+}
+
+/* gnb 공통영역 시작 */
+/* sticky를 위한 복붙 영역 시작 */
+.gnbCont{
+    position:sticky;
+    top:100vh;
+
+    z-index: 9999;
+}
+
+.gnb-cont{
+    width: 15vw;
+    
+    position: relative;
+    display: inline-block;
+    
+}
+
+.gnb{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right:0;
+    bottom:111px;
+    
+}
+/* sticky를 위한 복붙 영역 끝 */
+
+.gnb a{ 
+    margin-bottom: 10px;
+    line-height:21px;
+    font-family: 'Montserrat';
+}
+.gnb a:hover{
+    font-weight: bold;
+}
+
+/* .darkmode-btn{
+    margin-top:100px;
+    width:3rem;
+    height: 3rem;
+    border-radius: 50% 50%;
+    background-color: black;
+} */
+
+/* gnb 공통영역 끝 */
+
+.gnb .professor{
+    font-weight: bold;
+}
+
+
+
+.container{
+    width:calc(100% - 15vw);
+    height: 100%;
+    float: right;
+    /* display: block; */
+    
+    
+    /* background-color: red; */
+}
+
+/* 작품카테고리 */
+.container .conA{
+    padding: 0 50px;
+     margin-top: 140px;
+
+    /* background-color: coral; */
+}
+.conA h1{
+    margin: 0;
+    text-align: end;
+    font-size: 2.618rem;
+    font-weight: 700;
+    color: #4C4C4C;
+    font-family: 'Montserrat';
+}
+
+/* 작품 리스트(그리드) */
+.conC{
+    margin-top: 120px;
+    /* height: 100%; */
+    padding: 0 50px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    /* background-color: coral; */
+}
+#profile-grid{
+    padding-top: 100%;
+}
+
+
+.conC .profile{
+   position: relative;
+   transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.conC .profile:hover{
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+
+}
+
+
+/* 교수님 이름 / 도형배경 */
+
+.track h1{
+    color: white;
+    text-align: center;
+
+}
+.conC .text-backshape{
+    position: relative;
+}
+.professor-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+
+    color: #fff;
+}
+.professor-text h2{
+    font-size: 1.618rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.professor-text h3{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+#profile-grid .circle-green{
+    border-radius: 400px;
+    color: #1BA965;
+}
+
+
+
+.profile-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    padding-top: 60%;
+
+    color: white;
+    text-shadow: 0px 1px 4px rgba(87, 87, 87, 0.8);
+    /* background-color:  rgba(245, 245, 245, 0.1); */
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.profile-text h2{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+.profile-text h3{
+    font-size: 1.618rem;
+    font-weight: 700;
+    margin: 0;
+}
+.profile-text:hover{
+    border-radius: 50%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.professor-text h2{
+    font-family: 'Montserrat';
+}
+/* 도형 css */
+.conC .circle{
+    border-radius: 200px;
+}
+.conC .tl-r-line{
+    border-top-left-radius: 100%;
+}
+.conC .tr-r-line{
+    border-top-right-radius: 100%;
+}
+.conC .br-r-line{
+    border-bottom-right-radius: 100%;
+}
+.conC .bl-r-line{
+    border-bottom-left-radius: 100%;
+}
+.purple{
+    border:1px solid #8000FF;
+    background-color: #8000FF;
+}
+.green{
+    border: 1px solid #1BA965;
+    background-color: #1BA965;
+}
+.red{
+    border: 1px solid #FF4D25;
+    background-color: #FF4D25;
+}
+.blue{
+    /* border: 1px solid #4CABE9; */
+    background-color: #4CABE9;
+}
+/* .yellow{
+    border: 1px solid #FFE61F;
+    background-color: #FFE61F;
+} */
+/* .filled.purple{
+    background-color: #8000FF;
+}
+.filled.green{
+    background-color: #1BA965;
+}
+.filled.red{
+    background-color: #FF4D25;
+}
+.filled.blue{
+    background-color: #256FFF;
+}
+.filled.yellow{
+    background-color: #FFE61F;
+} */
+
+
+
+
+/* -----------artworks img---------------- */
+.thumbnail-1{
+    background-image: url(http://m.xportsnews.com/contents/images/upload/article/2021/0311/1615426977806816.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+}
+
+/* .thumbnail-1:hover{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+} */
+
+.thumbnail-2{
+    background-image: url(https://t1.daumcdn.net/cfile/tistory/991C2D345C76334D41);
+    background-size: cover;
+    background-position: 0% 0%
+}
+/* --- */
+.thumbnail-3{
+    background-image: url(//img2.sbs.co.kr/img/sbs_cms/WE/2021/05/27/GHJ1622096715780-666-968.jpg);
+    background-size: 120%;
+    background-position: 25% 10%;
+}
+
+.thumbnail-4{
+    background-image: url(https://lh3.googleusercontent.com/proxy/MuRQ6FUI2T3shUTQJr4ybaZ3xxupiNsdCbb6XTSZ1OgIJcXKikvwyLdygWvbfPG8aRci_QcCOqsxm_b8myese8B3staRIdkYQUHc06b3oqceZOVSGzPNw58);
+    background-size: cover;
+    background-position: 0% 20%
+}
+/* --- */
+.thumbnail-5{
+    background-image: url(https://lh3.googleusercontent.com/proxy/CtuTGAwwWFiv6tLJKTIFAF1ILnZ4ndZowYuRnU0EuMKIjE1lO8jnkd9WpYxrShjJdj3YBj7xTDXdOLDMjjx_IaXZBc8i16rbMj0gCtdBF9xwN6UxhoxJVAPM);
+    background-size: 120%;
+    background-position: 50% 10%;
+}
+.thumbnail-6{
+    background-image: url(https://newsimg.sedaily.com/2019/08/20/1VN1JOSO5L_1.jpg);
+    background-size: cover;
+}
+/* --- */
+.thumbnail-7{
+    background-image: url(https://file2.nocutnews.co.kr/newsroom/image/2019/11/23/20191123045819255477_0_800_1200.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+}
+.thumbnail-8{
+    background-image: url(https://blog.kakaocdn.net/dn/bzodtB/btqYo0oVPHx/N9X7TNy8NRHoCMtks3GM51/img.jpg);
+    background-size: cover;
+    background-position: 0% 0%;
+}
+/* --- */
+.thumbnail-9{
+    background-image: url(https://cdn.inewspeople.co.kr/news/photo/201606/8228_16796_713.png);
+    background-size: 180%;
+    background-position: 20% 5%;
+
+}
+.thumbnail-10{
+    background-image: url(https://media.gettyimages.com/photos/choi-mooseong-poses-for-photographs-on-december-14-2015-in-seoul-picture-id503319224);
+    background-size: 140%;
+    background-position: 50% 0%;
+}
+
+/* --- */
+.thumbnail-11{
+    background-image: url(https://file2.nocutnews.co.kr/newsroom/image/2019/07/05/20190705173219621230_0_777_970.jpg);
+    background-size: cover;
+}
+.thumbnail-12{
+    background-image: url(http://subweb.kpu.ac.kr/dataview/cmscommon/20210507_1438_0610015.jpg);
+    background-size: cover;
+}
+/* --- */
+.thumbnail-13{
+    background-image: url(https://thumb.mtstarnews.com/06/2018/09/2018092120144377452_1.jpg);
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+.thumbnail-14{
+    background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMDAzMTJfOTUg/MDAxNTgzOTgyMjc5OTg4.8XNNebWpWmZaPs4Xr_dtJmyTlPXZLIN-2z9qkUhECZYg.d6y5c6jLA6_KQnsV4e66NftLB3CLLtc1JY_L_dkr7tkg.JPEG.eett7777/IMG_5667.jpg?type=w800);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-size: 150%;
+}
+.thumbnail-15{
+    background-image: url(https://t1.daumcdn.net/cfile/tistory/99C6E14F5AE13C2422);
+    background-size: cover;
+}
+
+/* 푸터영역 */
+footer{
+    width:100%;
+    height: 245px;
+    background-color: #000;
+    text-align: center;
+
+    display: inline-block;
+    
+}
+
+.foot-wrap{
+    margin:0 10vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footA{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    
+    height: 16vh;
+}
+
+.footA .foot-logo{
+    flex-direction: column-reverse;
+    color:#fff;
+    font-size: 20px;
+}
+
+.footA .foot-txt p{
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB {
+    color:#fff;
+    float: right;
+    margin-top: 2vh;
+}
+
+.footB .foot-logo{
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB .foot-txt{
+    font-size: 12px;
+    color:#4c4c4c;
+    text-align: right;
+}
+
+/* 푸터 영역 끝 */
+
+
+
+
+/* ------------------------------------------ */
+

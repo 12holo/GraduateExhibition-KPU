@@ -1,0 +1,406 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400, 500, 700, 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+    unicode-range: U+0041-005A, U+0061-007A;
+  }
+
+/* 공통영역 시작 */
+
+*{ font-size: 16px; margin: 0; padding: 0; box-sizing: border-box;  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', sans-serif;}
+
+a{ text-decoration: none; color:#000;}
+
+.wrap{
+    width: 100%;
+    min-height: 2300px;
+    position: relative;
+}
+/* utill영역 */
+.util-wrap{
+    z-index:9999;
+}
+
+.utill{
+    height: 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 60px;
+    color: #000;
+    mix-blend-mode: difference;
+}
+.utill .logo{
+    display: flex;
+    align-items: center;
+}
+
+.kpu-link{
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.header-contA{
+    display: flex;
+}
+
+/* gnb 공통영역 시작 */
+/* sticky를 위한 복붙 영역 시작 */
+.gnbCont{
+    position:sticky;
+    top:100vh;
+
+    z-index: 9999;
+}
+
+.gnb-cont{
+    width: 15vw;
+    
+    position: relative;
+    display: inline-block;
+    
+}
+
+.gnb{
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right:0;
+    bottom:111px;
+    
+}
+/* sticky를 위한 복붙 영역 끝 */
+
+.gnb a{ 
+    margin-bottom: 10px;
+    line-height:21px;
+    font-family: 'Montserrat';
+}
+.gnb a:hover{
+    font-weight: bold;
+}
+
+
+/* gnb 공통영역 끝 */
+
+.gnb .artwork{
+    font-weight: bold;
+}
+
+
+/* 컨테이너 영역-그리드 갤러리부분 */
+
+.container{
+    width:calc(100% - 15vw);
+    height: 100%;
+    float: right;
+    /* display: block; */
+}
+
+/* 작품카테고리 */
+.container .conA{
+    padding: 0 50px;
+     margin-top: 140px;
+
+    /* background-color: coral; */
+}
+.conA h1{
+    margin: 0;
+    text-align: end;
+    font-size: 2.618rem;
+    font-weight: 700;
+    color: #4C4C4C;
+    font-family: 'Montserrat';
+}
+
+.container .conB{
+    padding: 0 110px 0 50px;
+    margin-top: 130px;
+    /* background-color: coral; */
+}
+.container .conB ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.conB a{
+    text-decoration: none;
+    color: #4C4C4C;
+    font-size: 1.1618rem;
+    font-family: 'Montserrat';
+}
+.conB li{
+    margin-right: 36px;
+}
+.conB li:hover{
+    font-weight: bold;
+}
+.conB li:nth-child(2){
+    font-weight: bold;
+}
+/* 작품 리스트(그리드) */
+.conC{
+    margin-top: 120px;
+    /* height: 100%; */
+    padding: 0 50px;
+    margin-right: 60px;
+    margin-bottom: 120px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    /* background-color: coral; */
+}
+#work-grid{
+    padding-top: 100%;
+}
+.conC .work{
+   position: relative;
+   transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.conC .work:hover{
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+ }
+
+/* 작품 제목/학생이름 */
+.work-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    z-index: 3;
+    position: absolute;
+    top: 0;
+
+    color: #FFFF;
+    text-shadow: 0px 1px 4px rgba(87, 87, 87, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+.work-text h2{
+    /* font-family: 'Montserrat'; */
+    font-size: 1.618rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+.work-text h3{
+    /* font-family: 'Montserrat'; */
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+.work-text:hover{
+    border-radius: 50%;
+    /* -webkit-filter-blur: 2px;
+    filter: blur(2px); */
+    /* backdrop-filter: blur(5px) brightness(.9);
+    --webkit-backdrop-filter: blur(5px) brightness(.9); */
+    opacity: 1;
+    transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
+}
+
+/* 도형 css */
+.conC .circle{
+    border-radius: 50%;
+}
+.conC .tl-r-line{
+    border-top-left-radius: 100%;
+}
+.conC .tr-r-line{
+    border-top-right-radius: 100%;
+}
+.conC .br-r-line{
+    border-bottom-right-radius: 100%;
+}
+.conC .bl-r-line{
+    border-bottom-left-radius: 100%;
+}
+.purple{
+    /* border:1px solid #8000FF; */
+    background-color: #8000FF;
+}
+.green{
+    /* border: 1px solid #1BA965; */
+    background-color: #1BA965;
+}
+.red{
+    /* border: 1px solid #FF4D25; */
+    background-color: #FF4D25;
+}
+.blue{
+    /* border: 1px solid #4CABE9; */
+    background-color: #4CABE9;
+}
+.yellow{
+    /* border: 1px solid #FFE61F; */
+    background-color: #FFE61F;
+}
+/* .filled.purple{
+    background-color: #8000FF;
+}
+.filled.green{
+    background-color: #1BA965;
+}
+.filled.red{
+    background-color: #FF4D25;
+}
+.filled.blue{
+    background-color: #256FFF;
+}
+.filled.yellow{
+    background-color: #FFE61F;
+} */
+
+/* 푸터영역 */
+footer{
+    width:100%;
+    height: 245px;
+    background-color: #000;
+    text-align: center;
+
+    display: inline-block;
+    
+}
+
+.foot-wrap{
+    margin:0 10vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.footA{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    mix-blend-mode: difference;
+    
+    height: 16vh;
+}
+
+.footA .foot-logo{
+    flex-direction: column-reverse;
+    color:#fff;
+    font-size: 20px;
+    mix-blend-mode: difference;
+    
+}
+
+.footA .foot-txt p{
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB {
+    color:#fff;
+    float: right;
+    margin-top: 2vh;
+}
+
+.footB .foot-logo{
+    text-align: right;
+    font-family: 'Montserrat';
+}
+
+.footB .foot-txt{
+    font-size: 12px;
+    color:#4c4c4c;
+    text-align: right;
+}
+
+/* 푸터 영역 끝 */
+
+
+
+/* -----------artwork img---------------- */
+.thumbnail-1{
+    background-image: url(https://cdn.dribbble.com/users/2094661/screenshots/15718096/media/7ef9ed755d558d7beb8d34f6c49fa1be.png?compress=1&resize=1000x750);
+    background-size: cover;
+    background-position: center;
+}
+.thumbnail-2{
+    background-image: url(https://cdn.dribbble.com/users/5031392/screenshots/15719145/media/5280f2b2c4b047407649c45fa920d4ae.png?compress=1&resize=1000x750);
+    background-size: cover;
+    background-position: center;
+}
+.thumbnail-3{
+    background-image: url(https://cdn.dribbble.com/users/2125046/screenshots/15717764/media/6ae0d3e158ca6bc605415b22df9f821a.png?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+
+/* --- */
+.thumbnail-4{
+    background-image: url(https://cdn.dribbble.com/users/1022158/screenshots/15711636/media/b20b3037eaae30a00fc7de3bcb68cbef.png?compress=1&resize=1600x1200);
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail-5{
+    background-image: url(https://cdn.dribbble.com/users/984958/screenshots/15716108/media/773cd13e4def26d1b956127c0df059c6.png?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+
+/* --- */
+.thumbnail-6{
+    background-image: url(https://cdn.dribbble.com/users/2106116/screenshots/15718751/media/5278c355f221b8a89e0776a73870eeb2.png?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+
+.thumbnail-7{
+    background-image: url(https://cdn.dribbble.com/users/5250302/screenshots/15717441/media/8c85af12c56b622e9df1a1d9a2223edf.jpg?compress=1&resize=800x600);
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- */
+.thumbnail-8{
+    background-image: url(https://cdn.dribbble.com/users/4198678/screenshots/15707459/media/c6d897575b1d36420a725b521d10b14f.png?compress=1&resize=1600x1200);
+    background-size: cover;
+    background-position: center;
+}
+
+.thumbnail-9{
+    background-image: url(https://cdn.dribbble.com/users/3416941/screenshots/15705257/media/b9c67be5a246bf719cfe3ed89705d14a.jpg?compress=1&resize=1000x750);
+    background-size: cover;
+}
+.thumbnail-10{
+    background-image: url(https://cdn.dribbble.com/users/127188/screenshots/15702107/media/d3328f3dc84f97350f301cb65ffe5fb2.jpg?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+
+
+/* --- */
+.thumbnail-11{
+    background-image: url(https://cdn.dribbble.com/users/215/screenshots/15699646/media/2e39e10fd1aad3d2fd0fdd57a3787955.jpg?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+.thumbnail-12{
+    background-image: url(https://cdn.dribbble.com/users/2903901/screenshots/15699018/media/e7ce004806677e7bb83903ba4a95603d.png?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+
+/* --- */
+.thumbnail-13{
+    background-image: url(https://cdn.dribbble.com/users/6809924/screenshots/15697520/media/1f6e6a0483f3c7a99b492fce4d5db6a8.png?compress=1&resize=1600x1200);
+    background-size: cover;
+}
+.thumbnail-14{
+    background-image: url(https://cdn.dribbble.com/users/1122171/screenshots/15695347/media/1e51e1ac5f34facc8156d778f25db3ed.png?compress=1&resize=1000x750);
+    background-size: cover;
+}

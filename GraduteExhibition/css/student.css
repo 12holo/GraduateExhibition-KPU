@@ -13,58 +13,52 @@
 
 a{ text-decoration: none; color:#000;}
 
-.wrap{
-    width: 100%;
-    
-    max-height: 3000px;
-    /* background-color: #fff; */
+
+
+.fix-width{
+    width: 1400px;
+    height: 2910px;
+    /* 높이수정 */
+    margin: 0 auto;
     position: relative;
 }
-/* utill영역 */
-.util-wrap{
-    z-index:9999;
-}
 
+/* utill영역 */
 .utill{
     height: 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 60px;
+    padding: 0 50px;
     color: #000;
     mix-blend-mode: difference;
 }
 .utill .logo{
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    line-height: 50px;
 }
-
+.logo img{
+    margin-top: 15px;
+}
 .kpu-link{
+    float: right;
+    line-height: 50px;
     font-weight: bold;
     font-family: 'Montserrat';
 }
 
-.header-contA{
-    display: flex;
-}
 
 /* gnb 공통영역 시작 */
-/* sticky를 위한 복붙 영역 시작 */
+
+    /* sticky를 위한 복붙 영역 시작 */
 .gnbCont{
     position:sticky;
     top: 100vh;
-
     z-index: 9999;
 }
-
 .gnb-cont{
-    width: 15vw;
-    
+    width: 220px;
+    /* height: 300px; */
     position: relative;
     display: inline-block;
-    
 }
-
 .gnb{
     text-align: right;
     display: flex;
@@ -72,10 +66,9 @@ a{ text-decoration: none; color:#000;}
     align-items: flex-end;
     position: absolute;
     right:0;
-    bottom:111px;
-    
+    bottom:110px;
 }
-/* sticky를 위한 복붙 영역 끝 */
+    /* sticky를 위한 복붙 영역 끝 */
 
 .gnb a{ 
     margin-bottom: 10px;
@@ -85,47 +78,31 @@ a{ text-decoration: none; color:#000;}
 .gnb a:hover{
     font-weight: bold;
 }
-
-/* .darkmode-btn{
-    margin-top:100px;
-    width:3rem;
-    height: 3rem;
-    border-radius: 50% 50%;
-    background-color: black;
-} */
-
-/* gnb 공통영역 끝 */
-
 .gnb .student{
     font-weight: bold;
 }
 
 
+/* 컨테이너 영역-그리드 갤러리부분 */
 
 .container{
-    width:calc(100% - 15vw);
-    height: 100%;
+    width: 1180px;
+    height: calc(100% - 50px);
     float: right;
-    /* display: block; */
-    
-    
-    /* background-color: red; */
 }
 
-/* 작품카테고리 */
+/* 페이지 타이틀 */
 .container .conA{
-    padding: 0 50px;
-     margin-top: 140px;
-
-    /* background-color: coral; */
+    margin-top: 140px;
 }
 .conA h1{
+    padding: 0 50px;
     margin: 0;
     text-align: end;
-    font-size: 2.618rem;
+    font-size: 42px;
     font-weight: 700;
+    color: #424242;
     font-family: 'Montserrat';
-    color: #4C4C4C;
 }
 
 /* 작품 리스트(그리드) */
@@ -133,13 +110,10 @@ a{ text-decoration: none; color:#000;}
     margin-top: 120px;
     /* height: 100%; */
     padding: 0 50px;
-    margin-right: 60px;
     margin-bottom: 120px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-
-    /* background-color: coral; */
+    grid-template-rows: repeat(6, 1fr);
 }
 #profile-grid{
     padding-top: 100%;
@@ -174,12 +148,12 @@ a{ text-decoration: none; color:#000;}
     color: #fff;
 }
 .professor-text h2{
-    font-size: 1.618rem;
+    font-size: 25px;
     font-weight: 700;
     margin: 0 0 10px 0;
 }
 .professor-text h3{
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     margin: 0;
 }
@@ -206,12 +180,12 @@ a{ text-decoration: none; color:#000;}
     transition: all 0.6s cubic-bezier(0,1.02,.82,1.02);
 }
 .profile-text h2{
-    font-size:1rem;
+    font-size: 16px;
     font-weight: 400;
     margin: 0 0 5px 0;
 }
 .profile-text h3{
-    font-size: 1.618rem;
+    font-size: 25px;
     font-weight: bold;
     margin: 0;
 }
@@ -295,7 +269,7 @@ a{ text-decoration: none; color:#000;}
 }
 /* --- */
 .thumbnail-3{
-    background-image: url(https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/119788798_173753480889003_2495208072326516078_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=973b4a&_nc_ohc=0Je8krgWX7MAX85RJvp&_nc_ht=scontent-gmp1-1.xx&oh=0f4bf197153df6ccfc5d30a6f8e833ce&oe=60E25A65);
+    background-image: url(https://img.insight.co.kr/static/2020/03/20/700/95hk8917p5p0w6bczv26.jpg);
     background-size: cover;
 }
 .thumbnail-4{
@@ -390,58 +364,60 @@ a{ text-decoration: none; color:#000;}
 }
 /* 푸터영역 */
 footer{
-    width:100%;
+    min-width: 1400px;
     height: 245px;
     background-color: #000;
-    text-align: center;
+    display: block;
 
-    bottom: 0;
-    display: inline-block;
+    position: relative;
     
 }
-
 .foot-wrap{
-    margin:0 10vw;
-    display: flex;
-    flex-direction: column;
-    
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .footA{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    
-    height: 16vh;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding-left: 50px;
 }
-
 .footA .foot-logo{
-    flex-direction: column-reverse;
-    color:#fff;
-    font-size: 20px;
+    display: inline-block;
+    line-height: 245px;
 }
 
-.footA .foot-txt p{
+.footB {
+    width: 50%;
+    color:#fff;
+    float: right;
+    padding: 70px 50px 70px 0;
+}
+.footC{
+    width: 100%;
+}
+.footC p{
+    text-align: right;
+    float: right;
     font-family: 'Montserrat';
     color:#fff;
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
-    text-align: right;
 }
-
-.footB {
-    color:#fff;
+.footD{
+    width: 100%;
     float: right;
-    margin-top: 2vh;
+    margin-top: 15px;
 }
-
-.footB .foot-logo{
+.footD .foot-logo{
     text-align: right;
     font-family: 'Montserrat';
 }
 
-.footB .foot-txt{
+.footD .foot-txt{
     font-size: 12px;
     color:#4c4c4c;
     text-align: right;

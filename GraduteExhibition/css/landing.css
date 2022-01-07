@@ -15,128 +15,92 @@
 
 a{ text-decoration: none; color:#000;}
 
+
 .wrap{
-    /* z-index: -1; */
-    width: 100vw;
+    width: 100%;
+    min-width: 1440px;
+    min-height: 100vh;
     background-color: #000;
     position: relative;
+    overflow: hidden;
+}
+.utill-wrap{
+    width: 1440px;
+    margin: 0 auto;
+    z-index: 1;
 }
 
-
-header{
-    width: 100vw;
-    height:100vh ; 
-}
 /* utill영역 */
 .utill{
     height: 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 60px;
+    padding: 0 50px;
     color: white;
-    
 }
 .utill .logo{
-    display: flex;
-    align-items: center;
-    mix-blend-mode: difference;
-    
-}
-
-.kpu-link{
-    font-weight: bold;
-    mix-blend-mode: difference;
-}
-
-.header-contA{
-    display: flex;
-}
-
-
-
-/* gnb 공통영역 시작 */
-
-.gnb-wrap{
-    width: 15vw;
-    height: 94vh;
-    position: relative;
     display: inline-block;
+    line-height: 50px;
+    mix-blend-mode: difference;
 }
-
-.gnb{
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    right:0;
-    bottom:111px;
-    font-family: 'Montserrat';
+.logo img{
+    margin-top: 15px;
 }
-
-.gnb a{ 
-    font-family: 'Montserrat';
-    margin-bottom: 10px;
-    line-height:21px;
-}
-.gnb a:hover{
+.kpu-link{
+    float: right;
+    line-height: 50px;
     font-weight: bold;
+    font-family: 'Montserrat';
+    mix-blend-mode: difference;
 }
-/* .darkmode-btn{
-    margin-top:100px;
-    width:3rem;
-    height: 3rem;
-    border-radius: 50% 50%;
-    background-color: black;
-} */
 
-/* gnb 공통영역 끝 */
 
-/* 공통영역 끝 */
+.container{
+    /* min-width: 1440px;
+    width: 100%; */
+    width: 1440px;
+    /* height: calc(100vh - 50px); */
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
 
 .title-wrap{
-    width: 88vw;
-    padding-bottom: 10vh;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-    z-index: 1;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    
+    color:#000;
 }
 
 .main-title{
     text-align: center;
-    
 }
 
 .main-title p {
     font-size: 16px;
     font-family: 'Montserrat';
-}
-
-.main-title h1{
-    font-size: 4.236rem;
-    font-family: 'Montserrat';
+    margin-top: -10px;
 }
 
 .main-title img{
-    scale: 5;
+    transform: scale(0.95);
 }
 
 .enter-btn{
-    width: 30vh;
-    height: 5vh;
-    margin-top: 1.5vh;
+    width: 300px;
+    padding: 15px 0px;
+    border-radius: 150px;
+    /* margin-top: 1.5vh; */
     background-color: #000;
     color:#fff;
     text-align: center;
-    font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height:4.5vh;
-    border-radius: 2.5vh;
     font-family: 'Montserrat';
+    margin: 20px auto 0 auto;
+
 }
 
 
@@ -144,36 +108,33 @@ header{
 
 
 .landing-section1{
-    /* overflow: hidden; */
-    position: absolute;
-    width: 77vw;
-    height: 100vh;
-    
-}
-
-.landing-section2{
-    position: absolute; 
-    width: 23vw;
-    height: 100vh;
-    right:0px;
-    overflow: hidden;
+    width: 75%;
+    /* width: 1080px; */
+    min-height: 1080px;
+    position: relative;
+    display: inline-block;
+    left: 0;
 }
 
 .square-group-wrap{
-    position:relative;
-    float:right;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
     transition: all 1s ease-in-out;
     
 }
-
 .back-white-square{ 
-    position:absolute;
-    bottom:0px;
-    right:0px;
-    width:78vw;
-    height:78vw;
+    width: 1080px;
+    height: 1080px;
+    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
     background-color: #fff;
-    border-radius: 100% 0 0 0 ;
+    border-top-left-radius: 100%;
+
+
     animation-name: roundedSquare1;
     animation-duration: 2s;
 
@@ -181,55 +142,66 @@ header{
 
 .front-color-square-group1{
     display: inline-block;
+    width: 35%;
+    height: 100%;
+
     position: absolute;
-    bottom:0px;
-    right:0px;
-    transition: all 1s ease-in-out;
+    right: 0;
     
-}
-
-
-.front-color-square-group2{
-    display: inline-block;
-    position: absolute;
-    bottom:0px;
-    left:0px;
-
     transition: all 1s ease-in-out;
-    
 }
-
 .front-yellow-square{
-    
     background-color: #FFE61F;
-    width: 42vh;
-    height: 42vh;
+    /* width: 360px;
+    height: 360px; */
+    width: 100%;
+    height: 35%;
     border-radius: 100% 0 0 0;
     animation-name: roundedSquare1;
     animation-duration: 2s;
-    
 }
 .front-red-square{
     background-color: #FF4D25;
-    width: 42vh;
-    height: 42vh;
+    width: 100%;
+    height: 35%;
     border-radius: 0 0 0 100% ;
     animation-name: roundedSquare2;
     animation-duration: 2s;
 }
 .front-green-square{
     background-color: #16B569;
-    width: 42vh;
-    height: 42vh;
+    width: 100%;
+    height: 35%;
     border-radius: 100% 0 0 0;
     animation-name: roundedSquare1;
     animation-duration: 2s;
 }
+/* --------- */
+.landing-section2{
+    display: inline-block;
+    width: 25%;
+    min-height: 1080px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 360px; */
+    /* height: 100vh; */
+}
+.front-color-square-group2{
+    display: inline-block;
+    width: 378px;
+    min-height: 1080px;
+
+    position: absolute;
+    
+    transition: all 1s ease-in-out;
+    
+}
 
 .front-white-square{
     background-color: #fff;
-    width: 42vh;
-    height: 42vh;
+    width: 100%;
+    height: 378px;
     border-radius: 0 0 100% 0;
     animation-name: roundedSquare4;
     animation-duration: 2s;
@@ -237,8 +209,8 @@ header{
 
 .front-purple-square{
     background-color: #A145FD;
-    width: 42vh;
-    height: 42vh;
+    width: 100%;
+    height: 378px;
     border-radius: 0 100% 0 0;
     animation-name: roundedSquare3;
     animation-duration: 2s;
@@ -246,8 +218,8 @@ header{
 
 .front-blue-square{
     background-color: #4CABE9;
-    width: 42vh;
-    height: 42vh;
+    width: 100%;
+    height:378px;
     border-radius: 0 0 100% 0;
     animation-name: roundedSquare4;
     animation-duration: 2s;
@@ -292,60 +264,68 @@ header{
 
 /* 랜딩페이지 애니메이션 영역 끝 */
 
-/* 푸터 영역 시작 */
-
+/* 푸터영역 */
 footer{
-    width:100vw;
+    min-width: 1440px;
     height: 245px;
     background-color: #000;
-    text-align: center;    
-}
+    display: block;
 
-.foot-wrap{
-    margin:0 10vw;
-    display: flex;
-    flex-direction: column;
+    position: relative;
     
+}
+.foot-wrap{
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .footA{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    
-    height: 16vh;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding-left: 50px;
+}
+.footA .foot-logo{
+    display: inline-block;
+    line-height: 245px;
 }
 
-.footA .conA{
-    flex-direction: column-reverse;
+.footB {
+    width: 50%;
     color:#fff;
-    font-size: 20px;
+    float: right;
+    padding: 70px 50px 70px 0;
 }
-
-.footA .conB p{
+.footC{
+    width: 100%;
+}
+.footC p{
+    text-align: right;
+    float: right;
+    font-family: 'Montserrat';
     color:#fff;
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
-    text-align: right;
 }
-
-.footB {
-    color:#fff;
+.footD{
+    width: 100%;
     float: right;
-    margin-top: 2vh;
+    margin-top: 15px;
 }
-
-.footB .conA{
+.footD .foot-logo{
     text-align: right;
     font-family: 'Montserrat';
 }
 
-.footB .conB{
+.footD .foot-txt{
     font-size: 12px;
     color:#4c4c4c;
     text-align: right;
 }
 
-
 /* 푸터 영역 끝 */
+
+
+/* ------------------------------------------ */

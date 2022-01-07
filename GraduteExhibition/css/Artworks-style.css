@@ -14,56 +14,52 @@
 
 a{ text-decoration: none; color:#000;}
 
-.wrap{
-    width: 100%;
-    min-height: 2300px;
+
+
+.fix-width{
+    width: 1400px;
+    height: 2256px;
+    /* 높이수정 */
+    margin: 0 auto;
     position: relative;
 }
-/* utill영역 */
-.util-wrap{
-    z-index:9999;
-}
 
+/* utill영역 */
 .utill{
     height: 50px;
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 60px;
+    padding: 0 50px;
     color: #000;
     mix-blend-mode: difference;
 }
 .utill .logo{
-    display: flex;
-    align-items: center;
+    display: inline-block;
+    line-height: 50px;
 }
-
+.logo img{
+    margin-top: 15px;
+}
 .kpu-link{
+    float: right;
+    line-height: 50px;
     font-weight: bold;
     font-family: 'Montserrat';
 }
 
-.header-contA{
-    display: flex;
-}
 
 /* gnb 공통영역 시작 */
-/* sticky를 위한 복붙 영역 시작 */
+
+    /* sticky를 위한 복붙 영역 시작 */
 .gnbCont{
     position:sticky;
-    top:100vh;
-
+    top: 100vh;
     z-index: 9999;
 }
-
 .gnb-cont{
-    width: 15vw;
-    
+    width: 220px;
+    /* height: 300px; */
     position: relative;
     display: inline-block;
-    
 }
-
 .gnb{
     text-align: right;
     display: flex;
@@ -71,10 +67,9 @@ a{ text-decoration: none; color:#000;}
     align-items: flex-end;
     position: absolute;
     right:0;
-    bottom:111px;
-    
+    bottom:110px;
 }
-/* sticky를 위한 복붙 영역 끝 */
+    /* sticky를 위한 복붙 영역 끝 */
 
 .gnb a{ 
     margin-bottom: 10px;
@@ -84,10 +79,6 @@ a{ text-decoration: none; color:#000;}
 .gnb a:hover{
     font-weight: bold;
 }
-
-
-/* gnb 공통영역 끝 */
-
 .gnb .artwork{
     font-weight: bold;
 }
@@ -96,32 +87,30 @@ a{ text-decoration: none; color:#000;}
 /* 컨테이너 영역-그리드 갤러리부분 */
 
 .container{
-    width:calc(100% - 15vw);
-    height: 100%;
+    width: 1180px;
+    height: calc(100% - 50px);
     float: right;
-    /* display: block; */
 }
 
-/* 작품카테고리 */
-.container .conA{
-    padding: 0 50px;
-     margin-top: 140px;
 
-    /* background-color: coral; */
+/* 페이지 타이틀 */
+.container .conA{
+    margin-top: 140px;
 }
 .conA h1{
+    padding: 0 50px;
     margin: 0;
     text-align: end;
-    font-size: 2.618rem;
+    font-size: 42px;
     font-weight: 700;
-    color: #4C4C4C;
+    color: #424242;
     font-family: 'Montserrat';
 }
 
+/* 카테고리 */
 .container .conB{
-    padding: 0 110px 0 50px;
+    padding: 0 50px;
     margin-top: 130px;
-    /* background-color: coral; */
 }
 .container .conB ul{
     list-style: none;
@@ -132,8 +121,8 @@ a{ text-decoration: none; color:#000;}
 }
 .conB a{
     text-decoration: none;
-    color: #4C4C4C;
-    font-size: 1.1618rem;
+    color: #424242;
+    font-size: 20px;
     font-family: 'Montserrat';
 }
 .conB li{
@@ -145,12 +134,12 @@ a{ text-decoration: none; color:#000;}
 .conB li:nth-child(2){
     font-weight: bold;
 }
+
 /* 작품 리스트(그리드) */
 .conC{
     margin-top: 120px;
     /* height: 100%; */
     padding: 0 50px;
-    margin-right: 60px;
     margin-bottom: 120px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -265,66 +254,69 @@ a{ text-decoration: none; color:#000;}
 
 /* 푸터영역 */
 footer{
-    width:100%;
+    min-width: 1400px;
     height: 245px;
     background-color: #000;
-    text-align: center;
+    display: block;
 
-    display: inline-block;
+    position: relative;
     
 }
-
 .foot-wrap{
-    margin:0 10vw;
-    display: flex;
-    flex-direction: column;
-    
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
 }
 
 .footA{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    mix-blend-mode: difference;
-    
-    height: 16vh;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    padding-left: 50px;
 }
-
 .footA .foot-logo{
-    flex-direction: column-reverse;
-    color:#fff;
-    font-size: 20px;
-    mix-blend-mode: difference;
-    
+    display: inline-block;
+    line-height: 245px;
 }
 
-.footA .foot-txt p{
+.footB {
+    width: 50%;
+    color:#fff;
+    float: right;
+    padding: 70px 50px 70px 0;
+}
+.footC{
+    width: 100%;
+}
+.footC p{
+    text-align: right;
+    float: right;
+    font-family: 'Montserrat';
     color:#fff;
     font-weight: bold;
     font-size: 16px;
     line-height: 18px;
-    text-align: right;
-    font-family: 'Montserrat';
 }
-
-.footB {
-    color:#fff;
+.footD{
+    width: 100%;
     float: right;
-    margin-top: 2vh;
+    margin-top: 15px;
 }
-
-.footB .foot-logo{
+.footD .foot-logo{
     text-align: right;
     font-family: 'Montserrat';
 }
 
-.footB .foot-txt{
+.footD .foot-txt{
     font-size: 12px;
     color:#4c4c4c;
     text-align: right;
 }
 
 /* 푸터 영역 끝 */
+
+
+/* ------------------------------------------ */
 
 
 

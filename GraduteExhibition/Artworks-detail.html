@@ -15,6 +15,7 @@
 
     <!-- 폰트어썸-아이콘 -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
 
     <!-- 스크롤 효과 -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
@@ -30,13 +31,10 @@
     </script>
 
 
-    <!-- 상단 gnb -->
-    <div class="utill-wrap">
-        <div class="utill">
-            <div class="logo"><img src="image/logo-top.png"></div>
-            <div class="kpu-link">Korea Polytechnic University</div>
-        </div>
-    </div>
+    <header class="utill">
+        <div class="logo"><img src="image/logo-top.png"></div>
+        <div class="kpu-link">Korea Polytechnic University</div>
+    </header>
 
     <header class="infoA">
         <!-- hero header 이미지 -->
@@ -80,15 +78,13 @@
         </div>
 
     </header>
-    <!-- <section class="thoughts">
-        <h2>“”</h2>
-    </section> -->
 
 
-    <!-- 사이드 여백 속  음성재생버튼 -->
-    <div class="gnbCont">
-        <header class="gnb-wrap">
-            <div id="audio-btn-wrap">
+    <div class="fix-width">
+        <!-- 사이드 여백 속  음성재생버튼 -->
+        <div class="gnbCont">
+            <header class="gnb-wrap">
+                <div id="audio-btn-wrap">
                 <!-- 툴팁 -->
                 <div class="tooltip">작품설명을 위한 음성이 <br>준비되어 있습니다!</div>
 
@@ -103,13 +99,12 @@
                     <source src="audio/sample.mp3" type="audio/mp3">
                 </audio>
 
-            </div>
-        </header>
-    </div> 
-    
-    
-    <!-- 전체 내용 컨테이너 -->
-    <div class="container">
+                </div>
+            </header>
+        </div> 
+
+        <!-- 전체 내용 컨테이너 -->
+        <div class="container">
         <div class="empty-top"></div>
         <!-- 작품내용 -->
         <div class="contents">
@@ -315,8 +310,9 @@
 
         </div> 
 
+        </div>
+        <!-- 컨테이너 끝 -->
     </div>
-    <!-- 컨테이너 끝 -->
 
 
     <!-- 학생 네임카드 레이어팝업 -->
@@ -407,28 +403,41 @@
     </div>
 
     <!-- 오른쪽 여백 -->
-    <div class="empty-right"></div>
+    <!-- <div class="empty-right"></div> -->
 
     <!-- 푸터영역 -->
     <footer>
         <div class="foot-wrap">
+            
             <div class="footA">
                 <div class="foot-logo"><img src="image/logo-white.png"></div>
-                <div class="foot-txt">
+            </div>
+            <div class="footB">
+                <div class="footC">
                     <p>
                     Korea Polytechnic University <br>
                     Design Engineering <br>
                     Graduate Exhibition
                     </p>
                 </div>
+                <div class="footD">
+                    <div class="foot-logo">KPU</div>
+                    <div class="foot-txt">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
+                </div>
             </div>
-            <div class="footB">
-                <div class="foot-logo">KPU</div>
-                <div class="foot-txt">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
-            </div>
+
         </div>
     </footer>
 
     <script src="js/Artworks-detail-script.js"></script>
+    <!-- 스크립트 파일 경로 변경하기 -->
+    <script>
+        $(function(){
+            $('.logo').click(function(){
+            window.location.href = "landing.html";
+            });
+        });
+    </script>
+
 </body>
 </html>

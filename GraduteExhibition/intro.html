@@ -9,16 +9,43 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>KPU Graduate Exhibition</title>
 </head>
+
 <body>
+
+    <!-- 스크롤 효과 -->
+    <!-- <script> 
+            AOS.init(); 
+    </script> -->
     
-    <div class="wrap">
-        <div class="util-wrap">
-            <div class="utill">
-                <div class="logo"><img src="image/logo-top.png"></div>
-                <div class="kpu-link">Korea Polytechnic University</div>
+    <header class="utill">
+            <div class="logo"><img src="image/logo-top.png"></div>
+            <div class="kpu-link">Korea Polytechnic University</div>
+    </header>
+    <header class="banner">
+            
+        <!-- 배너 애니메이션 영역 시작 -->
+        <div class="banner-animation-wrap">
+            
+            <!-- <div class="red-stick-wrap"></div> -->
+                <div class="red-stick"></div>
+            
+                <div class="purple-stick"></div>
+            
+                <div class="green-stick"></div>
+                <div class="yellow-stick"></div>
+                <div class="blue-stick"></div>
+        </div>
+        <!-- 배너 애니메이션 영역 끝 -->
+        
+        <div class="title-wrap">
+            <div class="main-title">
+                <img src="image/logo-large.png" alt="">
             </div>
         </div>
-        <!-- STICKY 복붙 영역 시작 헤더에서  gnb-fixed-helper를 gnbCont로 감싸고 복붙해서 wrap이 부모 태그가 되도록 꺼내기  -->
+    </header>
+
+    <div class="fix-width">
+        <!-- <div class="gnb-wrap"> -->
         <div class="gnbCont">
             <div class="gnb-fixed-helper" style="height: 0px !important;">
                 <div class="gnb-cont" >
@@ -31,36 +58,11 @@
                 </div>
             </div>
         </div>
-        <!-- STICKY 복붙 영역 끝 복붙을 완성했다면 css를 수정하시지요 -->
-        
-        <header>
-            
-            <!-- 배너 애니메이션 영역 시작 -->
-            <div class="banner-animation-wrap">
-                
-                <!-- <div class="red-stick-wrap"></div> -->
-                    <div class="red-stick"></div>
-                
-                    <div class="purple-stick"></div>
-                
-                    <div class="green-stick"></div>
-                    <div class="yellow-stick"></div>
-                    <div class="blue-stick"></div>
-            </div>
-            <!-- 배너 애니메이션 영역 끝 -->
-            
-            
-            <div class="header-contA">
-                <div class="title-wrap">
-                    <div class="main-title">
-                        <img src="image/logo-large.png" alt="">
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </header>
+        <!-- </div> -->
+
+         <!-- 컨테이너 시작 -->
         <div class="container">
+
             <div class="animation-wrap">
                 <div class="ball-animation-position-helpper">
 
@@ -87,7 +89,8 @@
 
                 </div>
             </div>
-            <div class="conA intro">
+
+            <section class="conA intro">
                 <div class="text-area">
                     <div class="text">
                         <p class="kor">
@@ -112,93 +115,31 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </section>
             
             <section class="conB recoded-menual">
                 <div class="text-area">
-                    <div class="menual">
-                        <div class="text">
-                            You can hear the student's voice by pressing the recording button. 
-                            <br>
-                            <br>
-                            This button plays a voice recording of the student's description of the work.
-                        </div>
-                        <div class="recoded-btn-example">
-                            <i class="fas fa-headphones-alt"></i>
-                        </div>
+                    <div class="text en">
+                        You can hear the student's voice by pressing the recording button. 
+                        <br>
+                        <br>
+                        This button plays a voice recording of the student's description of the work.
+                    </div>
+                    <div class="recoded-btn-example">
+                        <i class="fas fa-headphones-alt"></i>
                     </div>
                 </div>
             </section>
+
             <section class="conC infomation">
                 <div class="info-area">
                     <div class="info-wrap">
-                    
                         <h3 class="info-title">2021년 한국산업기술대학교 디자인공학부 16회 졸업전시회 [Diagram] </h3>
-                    <div class="column-group">
-                        
-                        <div class="cont-column-1">
-                            <div class="allprof box">
-                                <h4>교수진</h4>
-                                    <div class="groupcont"> 
-                                        
-                                        <ul class="names col1">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                        <ul class="names col2">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                        <ul class="names col3">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                    </div>
-                            </div>
-                        
-
-                            <div class="leadprof box">
-                                <h4>지도교수</h4>
-                                    <div class="groupcont"> 
-                                        
-                                        <ul class="names col1">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                        <ul class="names col2">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                        <ul class="names col3">
-                                            <li>이문환</li>
-                                            <li>신상영</li>
-                                            <li>조남주</li>
-                                            <li>김한종</li>
-                                            <li>박노섭</li>
-                                        </ul>
-                                    </div>
-                            </div>
-
-                        </div>
-
-                        <div class="cont-column-2">
-                                <div class="student box">
-                                    <h4>참여학생</h4>
+                        <div class="column-group">
+                            
+                            <div class="cont-column-1">
+                                <div class="allprof box">
+                                    <h4>교수진</h4>
                                         <div class="groupcont"> 
                                             
                                             <ul class="names col1">
@@ -207,14 +148,6 @@
                                                 <li>조남주</li>
                                                 <li>김한종</li>
                                                 <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
                                             </ul>
                                             <ul class="names col2">
                                                 <li>이문환</li>
@@ -222,14 +155,6 @@
                                                 <li>조남주</li>
                                                 <li>김한종</li>
                                                 <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
                                             </ul>
                                             <ul class="names col3">
                                                 <li>이문환</li>
@@ -237,183 +162,275 @@
                                                 <li>조남주</li>
                                                 <li>김한종</li>
                                                 <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col4">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col5">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col6">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col7">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col8">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col9">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                            </ul>
-                                            <ul class="names col10">
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
-                                                <li>김한종</li>
-                                                <li>박노섭</li>
-                                                <li>이문환</li>
-                                                <li>신상영</li>
-                                                <li>조남주</li>
                                             </ul>
                                         </div>
                                 </div>
-                        </div>
+                            
 
-
-                        <div class="cont-column-3">
-                            <div class="volunteer box">
-                                <h4>졸업준비위원회</h4>
-                                    <div class="groupcont"> 
-                                        
-                                        <ul class="names col1">
-                                            <li>기획 총괄 : 방찬우</li>
-                                            <li>전시 : 김지호, 김다연</li>
-                                            <li>홍보 : 김가연</li>
-                                            <li>도록 편집 : 김주연</li>
-                                            <li>회계 : 하혜미</li>
-                                        </ul>
-                                        
-                                    </div>
-                            </div>
-                            <div class="volunteer box">
-                                <h4>도움</h4>
-                                    <div class="groupcont"> 
-                                        
-                                        <ul class="names col1">
-                                            <li>그래픽 디자인 : 방찬우</li>
-                                            <li>앱 디자인 : 김지호, 김다연</li>
-                                            <li>웹 개발 : 김가연</li>
+                                <div class="leadprof box">
+                                    <h4>지도교수</h4>
+                                        <div class="groupcont"> 
                                             
-                                        </ul>
-                                        
+                                            <ul class="names col1">
+                                                <li>이문환</li>
+                                                <li>신상영</li>
+                                                <li>조남주</li>
+                                                <li>김한종</li>
+                                                <li>박노섭</li>
+                                            </ul>
+                                            <ul class="names col2">
+                                                <li>이문환</li>
+                                                <li>신상영</li>
+                                                <li>조남주</li>
+                                                <li>김한종</li>
+                                                <li>박노섭</li>
+                                            </ul>
+                                            <ul class="names col3">
+                                                <li>이문환</li>
+                                                <li>신상영</li>
+                                                <li>조남주</li>
+                                                <li>김한종</li>
+                                                <li>박노섭</li>
+                                            </ul>
+                                        </div>
+                                </div>
+
+                            </div>
+
+                            <div class="cont-column-2">
+                                    <div class="student box">
+                                        <h4>참여학생</h4>
+                                            <div class="groupcont"> 
+                                                
+                                                <ul class="names col1">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col2">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col3">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col4">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col5">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col6">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col7">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col8">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col9">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                                <ul class="names col10">
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                    <li>김한종</li>
+                                                    <li>박노섭</li>
+                                                    <li>이문환</li>
+                                                    <li>신상영</li>
+                                                    <li>조남주</li>
+                                                </ul>
+                                            </div>
                                     </div>
                             </div>
+
+
+                            <div class="cont-column-3">
+                                <div class="volunteer box">
+                                    <h4>졸업준비위원회</h4>
+                                        <div class="groupcont"> 
+                                            
+                                            <ul class="names col1">
+                                                <li>기획 총괄 : 방찬우</li>
+                                                <li>전시 : 김지호, 김다연</li>
+                                                <li>홍보 : 김가연</li>
+                                                <li>도록 편집 : 김주연</li>
+                                                <li>회계 : 하혜미</li>
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                                <div class="volunteer box">
+                                    <h4>도움</h4>
+                                        <div class="groupcont"> 
+                                            
+                                            <ul class="names col1">
+                                                <li>그래픽 디자인 : 방찬우</li>
+                                                <li>앱 디자인 : 김지호, 김다연</li>
+                                                <li>웹 개발 : 김가연</li>
+                                                
+                                            </ul>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
                     </div>
                 </div>
             </section>
 
         </div>
+
     </div>
-    <!-- 푸터 영역 복붙해야될 것 -->
+
+    </div>   
+    <!-- 푸터영역 -->
     <footer>
         <div class="foot-wrap">
+            
             <div class="footA">
-                <div class="conA"><img src="image/logo-white.png"></div>
-                <div class="conB">
+                <div class="foot-logo"><img src="image/logo-white.png"></div>
+            </div>
+            <div class="footB">
+                <div class="footC">
                     <p>
                     Korea Polytechnic University <br>
                     Design Engineering <br>
                     Graduate Exhibition
                     </p>
                 </div>
+                <div class="footD">
+                    <div class="foot-logo">KPU</div>
+                    <div class="foot-txt">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
+                </div>
             </div>
-            <div class="footB">
-                <div class="conA">KPU</div>
-                <div class="conB">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
-            </div>
+
         </div>
     </footer>
-    <!-- 푸터 영역 -->
 
-    <script scr="js/intro.js"></script>
+    <script src="js/intro.js"></script>
+    <!-- 스크립트 파일 경로 변경하기 -->
+    <script>
+        $(function(){
+            $('.logo').click(function(){
+            window.location.href = "landing.html";
+            });
+        });
+    </script>
+
 </body>
+
 </html>

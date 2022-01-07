@@ -188,6 +188,13 @@ body{
     position: relative;
 }
 /* 사이드 여백 속 음성재생버튼 */
+.gnbCont{
+    width: 220px;
+    height: 100vh;
+    display: inline-block;
+    position:sticky;
+    top: 100px;
+}
 .gnb-wrap{
     width: 220px;
     /* height: 6000px; */

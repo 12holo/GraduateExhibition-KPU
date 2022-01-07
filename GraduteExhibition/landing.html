@@ -11,75 +11,83 @@
 </head>
 <body>
     <div class="wrap">
-        <div class="landing-section1">
-            <div class="square-grop-wrap">
-                <div class="back-white-square"></div>
-                <div class="front-color-square-group1">
-                    <div class="front-yellow-square"></div>
-                    <div class="front-red-square"></div>
-                    <div class="front-green-square"></div>
-                </div>
-            </div>
-        </div>
-        <div class="landing-section2">
-            <div class="square-grop-wrap">
-                <div class="front-color-square-group2">
-                    <div class="front-white-square"></div>
-                    <div class="front-purple-square"></div>
-                    <div class="front-blue-square"></div>
-                </div>
-                </div>
-        </div>
-        <header>
-            
-            <div class="utill">
+        <!-- <div class="utill-wrap">
+        
+            <header class="utill">
                 <div class="logo"><img src="image/logo-white.png"></div>
                 <div class="kpu-link">Korea Polytechnic University</div>
-            </div>
-            
-            <div class="header-contA">
-                <div class="gnb-wrap">
-                    <nav class="gnb">
-                        <a href="intro.html" class="intro">Intro</a>
-                        <a href="Artworks-gallery.html" class="artwork">Artworks</a>
-                        <a href="student.html" class="student">Student</a>
-                        <a href="professor.html" class="professor">Professor</a>
-                    </nav>
-                </div>
-                <div class="title-wrap">
-                    <div class="main-title">
-                        <p>Korea Polytechnic University</p>
-                        <img src="image/logo-large.png" alt="">
-                        <p>15th Graduate Exhibition</p>
+            </header>
+
+        </div> -->
+
+        <div class="container">
+            <!-- 애니메이션 -->
+                <div class="landing-section1">
+                    <div class="square-group-wrap">
+                        <div class="back-white-square"></div>
                     </div>
-                    <!-- 제이쿼리로 클릭이벤트 -->
-                    <div class="enter-btn">Enter</div>
+                    <div class="front-color-square-group1">
+                        <div class="front-yellow-square"></div>
+                        <div class="front-red-square"></div>
+                        <div class="front-green-square"></div>
+                    </div>
                 </div>
+
+                <div class="landing-section2">
+                    <div class="front-color-square-group2">
+                        <div class="front-white-square"></div>
+                        <div class="front-purple-square"></div>
+                        <div class="front-blue-square"></div>
+                    </div>
+                </div>
+            <!-- 애니메이션 끝 -->
+
+            <div class="title-wrap">
+                <div class="main-title">
+                    <p>Korea Polytechnic University</p>
+                    <img src="image/logo-large.png" alt="">
+                    <p>15th Graduate Exhibition</p>
+                </div>
+                <!-- 제이쿼리로 클릭이벤트 -->
+                <div class="enter-btn">Enter</div>
             </div>
-        </header>
+
+        </div>
 
     </div>
-    <!-- 푸터 영역 복붙해야될 것 -->
-    <footer>
+
+    <!-- 푸터영역 -->
+    <!-- <footer>
         <div class="foot-wrap">
+            
             <div class="footA">
-                <div class="conA"><img src="image/logo-white.png"></div>
-                <div class="conB">
+                <div class="foot-logo"><img src="image/logo-white.png"></div>
+            </div>
+            <div class="footB">
+                <div class="footC">
                     <p>
                     Korea Polytechnic University <br>
                     Design Engineering <br>
                     Graduate Exhibition
                     </p>
                 </div>
+                <div class="footD">
+                    <div class="foot-logo">KPU</div>
+                    <div class="foot-txt">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
+                </div>
             </div>
-            <div class="footB">
-                <div class="conA">KPU</div>
-                <div class="conB">경기도 시흥시 산기대학로 237 (정왕동) 한국산업기술대학교 공학관 A동 디자인공학부</div>
-            </div>
+
         </div>
-    </footer>
-    <!-- 푸터 영역 -->
+    </footer> -->
 
     <script src="js/landing.js"></script>
+    <!-- 스크립트 파일 경로 변경하기 -->
+    <script>
+        $(function(){
+            $('.logo').click(function(){
+            window.location.href = "landing.html";
+            });
+        });
+    </script>
 </body>
 </html>
